@@ -5,7 +5,6 @@ import 'cypress-axe';
 
 import 'cypress-plugin-api';
 import 'cypress-real-events';
-import '@mmisty/cypress-allure-adapter/support';
 import { getDate } from './methods/getDate.js';
 
 //Import custom keyword library
@@ -65,19 +64,16 @@ Cypress.on("window:before:load", window => {
   window.document.cookie = `${COOKIE_NAME}=${COOKIE_VALUE}`;
 });
 
-// allure report configuration
-const browser = Cypress.browser;
-const cypressVersion = Cypress.version;
-const browserVersion = browser.version;
-const browserName = browser.displayName;
-const url = Cypress.config().baseUrl;
-const parsedUrl = new URL(url);
-const domain = parsedUrl.hostname;
+beforeEach(() => {
+  const cookieTexts = ["ACCEPT COOKIES", "Accept cookies", "Agree"];
 
-Cypress.Allure.writeEnvironmentInfo({
-  'Application': 'INX International',
-  'Environment': domain,
-  Browser: browserName,
-  'Browser Version': browserVersion,
-  'Cypress Version': cypressVersion,
+  cy.get("body").then(($body) => {
+    cookieTexts.forEach((text) => {
+      if ($body.find(`button:contains("${text}")`).length) {
+        cy.contains("button", text)
+          .should("be.visible")
+          .click({ force: true });
+      }
+    });
+  });
 });

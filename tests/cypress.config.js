@@ -4,9 +4,7 @@ const { exec } = require("child_process");
 const { defineConfig } = require("cypress");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify");
-const {
-  configureAllureAdapterPlugins,
-} = require("@mmisty/cypress-allure-adapter/plugins");
+
 const { lighthouse, prepareAudit } = require("@cypress-audit/lighthouse");
 
 const RESULT_FOLDER = "results";
@@ -54,12 +52,6 @@ module.exports = defineConfig({
       snapshotOnly: true,
       requestMode: true,
       hideCredentials: true,
-      allure: true,
-      allureResults: "cypress/reports/allure-results",
-      allureCleanResults: true,
-      allureShowDuplicateWarn: true,
-      allureShowTagsInTitle: true,
-      allureLogCyCommands: true,
     },
     async setupNodeEvents(cypressOn, config) {
       // bind to the event we care about
@@ -68,7 +60,6 @@ module.exports = defineConfig({
       await preprocessor.addCucumberPreprocessorPlugin(on, config);
       on("file:preprocessor", browserify.default(config));
 
-      configureAllureAdapterPlugins(on, config);
       fs.ensureDirSync(lighthouseReportDir);
       on("task", {
         runLinkChecker() {

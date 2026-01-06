@@ -121,3 +121,5 @@ tests/cypress/reports
 tests/cypress/downloads
 tests/runner-results
 
+# Cucumber internal files
+cucumber-messages.ndjson

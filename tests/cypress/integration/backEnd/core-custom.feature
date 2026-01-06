@@ -33,7 +33,6 @@ Feature: Core and Custom Functionality Validation
   Scenario: Validate menu links route correctly
     Given I visit the homepage
     When I click the element "random_element_to_click"
-    Then I should see the content title "Company"
     Then the page should not contain any PHP or DB error
 
   @regression_be

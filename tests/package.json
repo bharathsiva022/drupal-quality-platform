@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Test automation for drupal core functionalities",
   "main": "index.js",
+    "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-report/cucumber.json"
+    }
+  },
   "scripts": {
     "run:test:dev": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress open --env configFile=dev",
     "run:live:baseline": "cross-env PERCY_BRANCH=live_site CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=prod,TAGS='@visual_existing'",
@@ -12,8 +18,8 @@
     "run:dev:vs:uat": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=uat CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_existing'",
     "run:pr:branch:vs:uat/dev/live": "cross-env PERCY_TARGET_BRANCH=<uat/dev/live_site> CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=<Your local accessable file>,TAGS='@visual_existing'",
     "run:dev:vs:figma": "cross-env PERCY_BRANCH=dev_vs_figma PERCY_TARGET_BRANCH=figma_design CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_redesign'",
-    "test:a11y:headed": "cross-env CYPRESS_username=<username> CYPRESS_password=<password>  cypress run --headed --env configFile=dev,TAGS='@Accessibility'",
-    "test:a11y:headless": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --browser chrome --env configFile=dev,TAGS='@Accessibility'"
+    "run:test:headless": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --browser chrome --env configFile=dev,TAGS='@core_custom'",
+    "run:report": "node report.js"
   },
   "repository": {
     "type": "git",
@@ -29,8 +35,6 @@
     "@badeball/cypress-cucumber-preprocessor": "^19.1.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
     "@cypress/browserify-preprocessor": "^3.0.2",
-    "@mmisty/cypress-allure-adapter": "^0.15.2",
-    "allure-commandline": "^2.24.1",
     "cross-env": "^7.0.3",
     "cypress": "^13.17.0",
     "cypress-browser-permissions": "^1.1.0",
@@ -51,6 +55,7 @@
     "@percy/cli": "^1.31.2",
     "@percy/cypress": "^3.1.6",
     "axe-core": "^4.11.0",
-    "cypress-axe": "^1.7.0"
+    "cypress-axe": "^1.7.0",
+    "multiple-cucumber-html-reporter": "^3.9.3"
   }
 }
