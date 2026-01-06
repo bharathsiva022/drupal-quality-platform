@@ -1,0 +1,11 @@
+{
+    "menu_title": "[data-drupal-selector='edit-label']",
+    "menu_admin_summary": "[id='edit-description']",
+    "menu_list": "table > tbody > tr",
+    "menu_add_menu_button": "li[class='local-actions__item'] > a",
+    "menu_add_link": "li[class='local-actions__item'] > a",
+    "menu_link_title": "#edit-title-0-value",
+    "menu_link_path": "#edit-link-0-uri",
+    "menu_parent_link_dropdown": "#edit-menu-parent"
+
+}

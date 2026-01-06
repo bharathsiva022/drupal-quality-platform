@@ -1,0 +1,56 @@
+{
+  "name": "generic-cypress-test",
+  "version": "1.0.0",
+  "description": "Test automation for drupal core functionalities",
+  "main": "index.js",
+  "scripts": {
+    "run:test:dev": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress open --env configFile=dev",
+    "run:live:baseline": "cross-env PERCY_BRANCH=live_site CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=prod,TAGS='@visual_existing'",
+    "run:components:live:vs:dev": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=components_baseline CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=prod,TAGS='@component_existing'",
+    "run:dev:vs:live": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=live_site CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_existing'",
+    "run:uat:vs:live": "cross-env PERCY_BRANCH=uat PERCY_TARGET_BRANCH=live_site CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=uat,TAGS='@visual_existing'",
+    "run:dev:vs:uat": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=uat CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_existing'",
+    "run:pr:branch:vs:uat/dev/live": "cross-env PERCY_TARGET_BRANCH=<uat/dev/live_site> CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=<Your local accessable file>,TAGS='@visual_existing'",
+    "run:dev:vs:figma": "cross-env PERCY_BRANCH=dev_vs_figma PERCY_TARGET_BRANCH=figma_design CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_redesign'",
+    "test:a11y:headed": "cross-env CYPRESS_username=<username> CYPRESS_password=<password>  cypress run --headed --env configFile=dev,TAGS='@Accessibility'",
+    "test:a11y:headless": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --browser chrome --env configFile=dev,TAGS='@Accessibility'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/team_specbee/inxinternational.git"
+  },
+  "author": "prasanna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/team_specbee/inxinternational/issues"
+  },
+  "homepage": "https://bitbucket.org/team_specbee/inxinternational#readme",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^19.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@mmisty/cypress-allure-adapter": "^0.15.2",
+    "allure-commandline": "^2.24.1",
+    "cross-env": "^7.0.3",
+    "cypress": "^13.17.0",
+    "cypress-browser-permissions": "^1.1.0",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-on-fix": "^1.0.2",
+    "cypress-parallel": "^0.14.0",
+    "cypress-plugin-api": "^2.11.1",
+    "cypress-real-events": "^1.11.0",
+    "fs-extra": "^11.1.1",
+    "linkinator": "^6.1.2",
+    "moment": "^2.29.4",
+    "path": "^0.12.7",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@cypress-audit/lighthouse": "^1.4.2",
+    "@percy/cli": "^1.31.2",
+    "@percy/cypress": "^3.1.6",
+    "axe-core": "^4.11.0",
+    "cypress-axe": "^1.7.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "login_page_title": "[class='page-title']",
+    "login_username_field": "#edit-name",
+    "login_password_field": "#edit-pass",
+    "login_submit_button": "[value='Log in']",
+    "login_captcha_question":"[for='edit-captcha-response']",
+    "login_captcha_field": "#edit-captcha-response",
+    "logout_button" : "[id='edit-submit']"
+}

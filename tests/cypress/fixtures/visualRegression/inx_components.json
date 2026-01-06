@@ -1,0 +1,22 @@
+{
+  "componentTesting1": {
+    "url": "/component-testing-1",
+    "testName": "componentTesting1",
+    "auth": false
+  },
+  "componentTesting2": {
+    "url": "/component-testing-2",
+    "testName": "componentTesting2",
+    "auth": false
+  },
+  "componentTesting3": {
+    "url": "/component-testing-3",
+    "testName": "componentTesting3",
+    "auth": false
+  },
+  "componentTesting4": {
+    "url": "/component-testing-4",
+    "testName": "componentTesting4",
+    "auth": false
+  }
+}

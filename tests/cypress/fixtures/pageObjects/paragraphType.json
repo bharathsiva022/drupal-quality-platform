@@ -1,0 +1,12 @@
+{
+    "paragraph_add_paragraph_type": "li[class='local-actions__item'] > a",
+    "paragraph_edit_label": "input[id=edit-label]",
+    "paragraph_edit_description": "textarea[id='edit-description']",
+    "paragraph_save_and_manage_fields": "input[value='Save and manage fields']",
+    "paragraph_create_new_field_button": "li[class='local-actions__item'] > a[href*='fields/add-field']",
+    "paragraph_field_select_field": "[id='edit-add'] > div",
+    "paragraph_add_list_content": "select[id*='edit-field-lists-0-subform']",
+    "pagagraph_view_list_in_page": ".field--name-field-lists",
+    "paragraph_delete_accordion_item": "li.delete.dropbutton__item.dropbutton-action.secondary-action > a"
+
+}

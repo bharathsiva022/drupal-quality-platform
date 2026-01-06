@@ -1,0 +1,27 @@
+{
+    "content_title": "#edit-title-0-value",
+    "content_save_button": "#edit-submit",
+    "CKeditor_source_editing_button": "[class='ck ck-button ck-source-editing-button ck-off ck-button_with-text']",
+    "CKeditor_body_source_editing_button":"button[data-cke-tooltip-text='Source']",
+
+    "ckeditor_editable": "div[class*='ck-editor__editabl']",
+    "CKeditor_textarea": "[class='ck-source-editing-area'] > textarea",
+    "ckeditor_role_textbox": "[role='textbox']",
+    "ckeditor_text_format_dropdown": "select[id='edit-body-0-format--2']",
+    "ckeditor_toolbar_item_bold_button": "[data-cke-tooltip-text*='Bold']",
+    "ckeditor_toolbar_item_italic_button": "[data-cke-tooltip-text*='Italic']",
+    "ckeditor_toolbar_item_link_button": "[data-cke-tooltip-text*='Link']",
+    "ckeditor_toolbar_item_bulleted_list_button": "[data-cke-tooltip-text*='Bulleted List']",
+    "ckeditor_toolbar_item_numbered_list_button": "[data-cke-tooltip-text*='Numbered List']:nth-child(1)",
+    "ckeditor_toolbar_item_block_quote_button": "[data-cke-tooltip-text*='Block quote']",
+    "ckeditor_toolbar_item_image_button": "[data-cke-tooltip-text*='image']",
+    "ckeditor_toolbar_item_insert_media_button":"[data-cke-tooltip-text='Insert Media']",
+    "ckeditor_toolbar_item_insert_media_list": ".media-library-item__name",
+    "ckeditor_toolbar_item_insert_table_button": "[data-cke-tooltip-text='Insert table']",
+    "ckeditor_toolbar_show_more_button": "[data-cke-tooltip-text='Show more items']",
+    "ckeditor_toolbar_item_heading_dropdown": "[data-cke-tooltip-text='Heading']",
+    "ckeditor_toolbar_heading_dropdown_list": "[class*='ck-heading-dropdown'] > div.ck-dropdown__panel > ul > li",
+    "ckeditor_iframe": "iframe.cke_wysiwyg_frame",
+    "ckeditor_body": "body.cke_editable",
+    "content_intro_section": "[data-drupal-selector='edit-body-0']"
+}

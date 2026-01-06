@@ -1,0 +1,22 @@
+{
+    "media_Link": "a[href='/admin/content/media']",
+    "add_media_button": "[class='local-actions__item'] > a",
+    "media_name_input": "input[name='name[0][value]']",
+    "media_source_dropdown": "select[id='edit-source']",
+    "media_file_input": "input[type='file']",
+    "media_input_link": "[id='edit-field-media-oembed-video-0-value']",
+    "media_name" : "#edit-name-0-value",
+    "media_alt_text_input": "input[name='field_media_image[0][alt]']",
+    "media_save_button": "input[id='edit-submit']",
+    "media_table": "table > tbody > tr",
+    "media_edia_button": "li.edit.dropbutton__item.dropbutton-action > a",
+    "delete_media_button": "a[href*='/delete']",
+    "media_filter_input": "input[id='edit-name']",
+    "media_filter_submit": "input[value='Apply']",
+    "confirmation_button": ".ui-dialog-buttonset > .button--primary",
+    "media_admin_item_table": "[class='admin-item']",
+    "media_remove_button": "input[value='Remove']",
+    "media_alternate_text": "[data-msg-required='Alternative text field is required.']",
+    "media_save_selected": "div.ui-dialog-buttonset.form-actions > button"
+  }
+  

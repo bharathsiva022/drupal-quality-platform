@@ -1,0 +1,92 @@
+{
+  "homepage": {
+    "url": "/homepage",
+    "testName": "Homepage Round 6 (WIP)",
+    "widths": [1440],
+    "auth": false
+  },
+  "product_individual": {
+    "url": "/products/product-individual",
+    "testName": "Product Individual (Final)",
+    "widths": [1440],
+    "auth": false
+  },
+  "product_individual_limited": {
+    "url": "/products/product-individual1",
+    "testName": "Product Individual (Limited Content)",
+    "widths": [1440],
+    "auth": false
+  }, 
+  "campaign_landing": {
+    "url": "/campaign-landing",
+    "testName": "Campaign Landing Page",
+    "widths": [1440],
+    "auth": false
+  },
+  "event_landing": {
+    "url": "/event-landing",
+    "testName": "Event Landing Page Template",
+    "widths": [1440],
+    "auth": true
+  },
+  "contact": {
+    "url": "/contact",
+    "testName": "INX Contact Page",
+    "widths": [1440],
+    "auth": false
+  },
+  "color_management": {
+    "url": "/color-management",
+    "testName": "Support / Color Management Page Template",
+    "widths": [1440],
+    "auth": false
+  },
+  "product_finder": {
+    "url": "/product-finder",
+    "testName": "Product_finder",
+    "widths": [1440],
+    "auth": false
+  },
+  "blog_listing": {
+    "url": "/blog-listing",
+    "testName": "Blog Landing Page",
+    "widths": [1440],
+    "auth": false
+  },
+  "blog_article": {
+    "url": "/blog/sustainabilitycompliance/maha-fda-reform-what-it-means-food-packaging-inks",
+    "widths": [1440],
+    "testName": "Blog Article",
+    "auth": false
+  },
+  "inx_news_landing": {
+    "url": "/news-landing",
+    "testName": "INX News Landing",
+    "widths": [1440],
+    "auth": false
+  },
+  "inx_events_landing": {
+    "url": "/inx-events",
+    "testName": "INX Events Landing",
+    "widths": [1440],
+    "auth": false
+  },
+  "regions": {
+    "url": "/regions",
+    "testName": "Company / Regions",
+    "widths": [1440],
+    "auth": false
+  },
+  "color_catalog_support ": {
+    "url": "/color-catalog-support ",
+    "testName": "Color Catalog Support",
+    "widths": [1440],
+    "auth": true
+  },
+  "buy_swatch ": {
+    "url": "/buy-swatch",
+    "testName": "INX Buy Swatch(es)",
+    "widths": [1440],
+    "auth": true
+  }
+}

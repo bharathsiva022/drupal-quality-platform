@@ -1,0 +1,13 @@
+{
+    "drupal_add_user_username_field": "#edit-name",
+    "drupal_add_user_email_field": "#edit-mail",
+    "drupal_add_user_password_field": "#edit-pass-pass1",
+    "drupal_add_user_confirm_password_field": "#edit-pass-pass2",
+    "drupal_add_user_status_button": "#edit-status > div",
+    "drupal_add_user_status_blocked_button": "#edit-status > div:nth-child(1)",
+    "drupal_add_user_roles_checkbox": "#edit-roles > div",
+    "drupal_add_user_submit_button": "#edit-submit",
+    "durpal_add_user_button": "#block-claro-local-actions > ul > li > a",
+    "drupal_cancel_account_button": "#edit-delete",
+    "drupal_delete_user_account": ":nth-child(4) > .form-item__label"
+}

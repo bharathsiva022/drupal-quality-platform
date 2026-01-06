@@ -1,0 +1,462 @@
+{
+  "homepage": {
+    "url": "/",
+    "testName": "homepageDesktop",
+    "auth": false
+  },
+  "companyRegionsAsiaPacific": {
+    "url": "/company/regions/asia-pacific",
+    "testName": "companyRegionsAsiaPacific",
+    "auth": false
+  },
+  "productsInksAndCoatingsActiveProcess": {
+    "url": "/products/inks-and-coatings?active=process",
+    "testName": "productsInksAndCoatingsActiveProcess",
+    "auth": false
+  },
+  "companyRegionsLatinAmericaEspanol": {
+    "url": "/company/regions/latin-america/espanol",
+    "testName": "companyRegionsLatinAmericaEspanol",
+    "auth": false
+  },
+  "company": {
+    "url": "/company",
+    "testName": "company",
+    "auth": false
+  },
+  "companyHistory": {
+    "url": "/company/history",
+    "testName": "companyHistory",
+    "auth": false
+  },
+  "productsInksAndCoatingsProcessPadPrintingInks": {
+    "url": "/products/inks-and-coatings/process/pad-printing-inks",
+    "testName": "productsInksAndCoatingsProcessPadPrintingInks",
+    "auth": false
+  },
+  "productsInksAndCoatings": {
+    "url": "/products/inks-and-coatings",
+    "testName": "productsInksAndCoatings",
+    "auth": false
+  },
+  "companyRegionsEurope": {
+    "url": "/company/regions/europe",
+    "testName": "companyRegionsEurope",
+    "auth": false
+  },
+  "companyRegionsEuropeDeutsch": {
+    "url": "/company/regions/europe/deutsch",
+    "testName": "companyRegionsEuropeDeutsch",
+    "auth": false
+  },
+  "companyRegionsEuropeFrench": {
+    "url": "/company/regions/europe/french",
+    "testName": "companyRegionsEuropeFrench",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationFlexiblePaper": {
+    "url": "/products/inks-and-coatings/application/flexible-paper",
+    "testName": "productsInksAndCoatingsApplicationFlexiblePaper",
+    "auth": false
+  },
+  "productsDigitalInksAndCoatingsGraphicsSignage": {
+    "url": "/products/digital-inks-and-coatings/graphics-signage",
+    "testName": "productsDigitalInksAndCoatingsGraphicsSignage",
+    "auth": false
+  },
+  "companyOverview": {
+    "url": "/company/overview",
+    "testName": "companyOverview",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationFoil": {
+    "url": "/products/inks-and-coatings/application/foil",
+    "testName": "productsInksAndCoatingsApplicationFoil",
+    "auth": false
+  },
+  "productsDigitalPrintersIntegrationDigitalIntegration": {
+    "url": "/products/digital-printers-integration/digital-integration",
+    "testName": "productsDigitalPrintersIntegrationDigitalIntegration",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationCoatings": {
+    "url": "/products/inks-and-coatings/application/coatings",
+    "testName": "productsInksAndCoatingsApplicationCoatings",
+    "auth": false
+  },
+  "productsInksAndCoatingsProcessDryOffset": {
+    "url": "/products/inks-and-coatings/process/dry-offset",
+    "testName": "productsInksAndCoatingsProcessDryOffset",
+    "auth": false
+  },
+  "sustainabilitySustainableProductsServices": {
+    "url": "/sustainability/sustainable-products-services",
+    "testName": "sustainabilitySustainableProductsServices",
+    "auth": false
+  },
+  "productsDigitalPrintersIntegrationDigitalPrinters": {
+    "url": "/products/digital-printers-integration/digital-printers",
+    "testName": "productsDigitalPrintersIntegrationDigitalPrinters",
+    "auth": false
+  },
+  "productsInksAndCoatingsProcessScreenPrintingInks": {
+    "url": "/products/inks-and-coatings/process/screen-printing-inks",
+    "testName": "productsInksAndCoatingsProcessScreenPrintingInks",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationSingleServePrintingInksCoatings": {
+    "url": "/products/inks-and-coatings/application/single-serve-printing-inks-coatings",
+    "testName": "productsInksAndCoatingsApplicationSingleServePrintingInksCoatings",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationFlexibleFilm": {
+    "url": "/products/inks-and-coatings/application/flexible-film",
+    "testName": "productsInksAndCoatingsApplicationFlexibleFilm",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationEnergyCurable": {
+    "url": "/products/inks-and-coatings/application/energy-curable",
+    "testName": "productsInksAndCoatingsApplicationEnergyCurable",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationMetalDecorating": {
+    "url": "/products/inks-and-coatings/application/metal-decorating",
+    "testName": "productsInksAndCoatingsApplicationMetalDecorating",
+    "auth": false
+  },
+  "productsDigitalSystemsIntegrationDigitalIntegration": {
+    "url": "/products/digital-systems-integration/digital-integration",
+    "testName": "productsDigitalSystemsIntegrationDigitalIntegration",
+    "auth": false
+  },
+  "companyRegionsEuropePolski": {
+    "url": "/company/regions/europe/polski",
+    "testName": "companyRegionsEuropePolski",
+    "auth": false
+  },
+  "companyQualityAssurance": {
+    "url": "/company/quality-assurance",
+    "testName": "companyQualityAssurance",
+    "auth": false
+  },
+  "productsDigitalInksAndCoatingsPackagingLabel": {
+    "url": "/products/digital-inks-and-coatings/packaging-label",
+    "testName": "productsDigitalInksAndCoatingsPackagingLabel",
+    "auth": false
+  },
+  "companyRegions": {
+    "url": "/company/regions",
+    "testName": "companyRegions",
+    "auth": false
+  },
+  "newsEvents": {
+    "url": "/news-events",
+    "testName": "newsEvents",
+    "auth": false
+  },
+  "companyRegulatoryCompliance": {
+    "url": "/company/regulatory-compliance",
+    "testName": "companyRegulatoryCompliance",
+    "auth": false
+  },
+  "companyRegionsNorthAmerica": {
+    "url": "/company/regions/north-america",
+    "testName": "companyRegionsNorthAmerica",
+    "auth": false
+  },
+  "products": {
+    "url": "/products",
+    "testName": "products",
+    "auth": false
+  },
+  "productsDigitalInksAndCoatings": {
+    "url": "/products/digital-inks-and-coatings",
+    "testName": "productsDigitalInksAndCoatings",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationFoldingCarton": {
+    "url": "/products/inks-and-coatings/application/folding-carton",
+    "testName": "productsInksAndCoatingsApplicationFoldingCarton",
+    "auth": false
+  },
+  "companyCareers": {
+    "url": "/company/careers",
+    "testName": "companyCareers",
+    "auth": false
+  },
+  "companyRegionsLatinAmerica": {
+    "url": "/company/regions/latin-america",
+    "testName": "companyRegionsLatinAmerica",
+    "auth": false
+  },
+  "servicesSupportColorManagementInxColorPerfection": {
+    "url": "/services-support/color-management/inx-color-perfection",
+    "testName": "servicesSupportColorManagementInxColorPerfection",
+    "auth": false
+  },
+  "servicesSupportTroubleShootingGuides": {
+    "url": "/services-support/trouble-shooting-guides",
+    "testName": "servicesSupportTroubleShootingGuides",
+    "auth": false
+  },
+  "userLoginSupportfalse": {
+    "url": "/user/login?support=false",
+    "testName": "userLoginSupportfalse",
+    "auth": false
+  },
+  "companyRegionsLatinAmericaPortuguese": {
+    "url": "/company/regions/latin-america/portuguese",
+    "testName": "companyRegionsLatinAmericaPortuguese",
+    "auth": false
+  },
+  "companyCorporateVentureCapitalProgram": {
+    "url": "/company/corporate-venture-capital-program",
+    "testName": "companyCorporateVentureCapitalProgram",
+    "auth": false
+  },
+  "companyRegionsEuropeItaliano": {
+    "url": "/company/regions/europe/Italiano",
+    "testName": "companyRegionsEuropeItaliano",
+    "auth": false
+  },
+  "productsDigitalInksAndCoatingsCustomFormulations": {
+    "url": "/products/digital-inks-and-coatings/custom-formulations",
+    "testName": "productsDigitalInksAndCoatingsCustomFormulations",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationCorrugated": {
+    "url": "/products/inks-and-coatings/application/corrugated",
+    "testName": "productsInksAndCoatingsApplicationCorrugated",
+    "auth": false
+  },
+  "sustainability": {
+    "url": "/sustainability",
+    "testName": "sustainability",
+    "auth": false
+  },
+  "productsInksAndCoatingsProcessLithographic": {
+    "url": "/products/inks-and-coatings/process/lithographic",
+    "testName": "productsInksAndCoatingsProcessLithographic",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationPlastic": {
+    "url": "/products/inks-and-coatings/application/plastic",
+    "testName": "productsInksAndCoatingsApplicationPlastic",
+    "auth": false
+  },
+  "productsInksAndCoatingsProcessFlexographic": {
+    "url": "/products/inks-and-coatings/process/flexographic",
+    "testName": "productsInksAndCoatingsProcessFlexographic",
+    "auth": false
+  },
+  "servicesSupportTechnicalSupportInplantInkRoomManagement": {
+    "url": "/services-support/technical-support/inplant-ink-room-management",
+    "testName": "servicesSupportTechnicalSupportInplantInkRoomManagement",
+    "auth": false
+  },
+  "sustainabilityProductSafety": {
+    "url": "/sustainability/product-safety",
+    "testName": "sustainabilityProductSafety",
+    "auth": false
+  },
+  "servicesSupportColorManagementInxColorPerfectionMetalColorCatalog": {
+    "url": "/services-support/color-management/inx-color-perfection/metal-color-catalog",
+    "testName": "servicesSupportColorManagementInxColorPerfectionMetalColorCatalog",
+    "auth": false
+  },
+  "productsDigitalPrintersIntegration": {
+    "url": "/products/digital-printers-integration",
+    "testName": "productsDigitalPrintersIntegration",
+    "auth": false
+  },
+  "servicesSupportInxUniversity": {
+    "url": "/services-support/inx-university",
+    "testName": "servicesSupportInxUniversity",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationNarrowWebtestNameLabel": {
+    "url": "/products/inks-and-coatings/application/narrow-web-testName-label",
+    "testName": "productsInksAndCoatingsApplicationNarrowWebtestNameLabel",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationLowMigration": {
+    "url": "/products/inks-and-coatings/application/low-migration",
+    "testName": "productsInksAndCoatingsApplicationLowMigration",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationFunctionalInks": {
+    "url": "/products/inks-and-coatings/application/functional-inks",
+    "testName": "productsInksAndCoatingsApplicationFunctionalInks",
+    "auth": false
+  },
+  "events": {
+    "url": "/events",
+    "testName": "events",
+    "auth": false
+  },
+  "servicesSupportColorManagement": {
+    "url": "/services-support/color-management",
+    "testName": "servicesSupportColorManagement",
+    "auth": false
+  },
+  "newsEventsEvents": {
+    "url": "/news-events/events",
+    "testName": "newsEventsEvents",
+    "auth": false
+  },
+  "news": {
+    "url": "/news",
+    "testName": "news",
+    "auth": false
+  },
+  "productsInksAndCoatingsProcessGravure": {
+    "url": "/products/inks-and-coatings/process/gravure",
+    "testName": "productsInksAndCoatingsProcessGravure",
+    "auth": false
+  },
+  "sustainabilitySustainabilityApproach": {
+    "url": "/sustainability/sustainability-approach",
+    "testName": "sustainabilitySustainabilityApproach",
+    "auth": false
+  },
+  "newsEventsNews": {
+    "url": "/news-events/news",
+    "testName": "newsEventsNews",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationGlassInks": {
+    "url": "/products/inks-and-coatings/application/glass-inks",
+    "testName": "productsInksAndCoatingsApplicationGlassInks",
+    "auth": false
+  },
+  "productsInksAndCoatingsActiveApplication": {
+    "url": "/products/inks-and-coatings?active=application",
+    "testName": "productsInksAndCoatingsActiveApplication",
+    "auth": false
+  },
+  "productsDigitalInksAndCoatingsTextileAndHomeDecor": {
+    "url": "/products/digital-inks-and-coatings/textile-and-home-decor",
+    "testName": "productsDigitalInksAndCoatingsTextileAndHomeDecor",
+    "auth": false
+  },
+  "servicesSupportDispenserProgram": {
+    "url": "/services-support/dispenser-program",
+    "testName": "servicesSupportDispenserProgram",
+    "auth": false
+  },
+  "companyResearchAndDevelopment": {
+    "url": "/company/research-and-development",
+    "testName": "companyResearchAndDevelopment",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationLamination": {
+    "url": "/products/inks-and-coatings/application/lamination",
+    "testName": "productsInksAndCoatingsApplicationLamination",
+    "auth": false
+  },
+  "servicesSupport": {
+    "url": "/services-support",
+    "testName": "servicesSupport",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationShrinkSleeve": {
+    "url": "/products/inks-and-coatings/application/shrink-sleeve",
+    "testName": "productsInksAndCoatingsApplicationShrinkSleeve",
+    "auth": false
+  },
+  "productsDigitalPrintersIntegrationComponentsModules": {
+    "url": "/products/digital-printers-integration/components-modules",
+    "testName": "productsDigitalPrintersIntegrationComponentsModules",
+    "auth": false
+  },
+  "sustainabilitySustainabilityResources": {
+    "url": "/sustainability/sustainability-resources",
+    "testName": "sustainabilitySustainabilityResources",
+    "auth": false
+  },
+  "contactDistributors": {
+    "url": "/contact/distributors",
+    "testName": "contactDistributors",
+    "auth": false
+  },
+  "sustainabilitySocialResponsibility": {
+    "url": "/sustainability/social-responsibility",
+    "testName": "sustainabilitySocialResponsibility",
+    "auth": false
+  },
+  "productsDigitalInksAndCoatingsDirectToObject": {
+    "url": "/products/digital-inks-and-coatings/direct-to-object",
+    "testName": "productsDigitalInksAndCoatingsDirectToObject",
+    "auth": false
+  },
+  "contactUs": {
+    "url": "/contact-us",
+    "testName": "contactUs",
+    "auth": false
+  },
+  "sustainabilityCssfModel": {
+    "url": "/sustainability/cssf-model",
+    "testName": "sustainabilityCssfModel",
+    "auth": false
+  },
+  "productsInxColorPerfectionProgramMetalColorCatalogRegisterCatalog": {
+    "url": "/products/inx-color-perfection-program/metal-color-catalog/register-catalog",
+    "testName": "productsInxColorPerfectionProgramMetalColorCatalogRegisterCatalog",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationCommercialSheetfed": {
+    "url": "/products/inks-and-coatings/application/commercial-sheetfed",
+    "testName": "productsInksAndCoatingsApplicationCommercialSheetfed",
+    "auth": false
+  },
+  "companyRegionsEuropeEspanol": {
+    "url": "/company/regions/europe/espanol",
+    "testName": "companyRegionsEuropeEspanol",
+    "auth": false
+  },
+  "eventsCanContest": {
+    "url": "/events/can-contest",
+    "testName": "eventsCanContest",
+    "auth": false
+  },
+  "contactUsLocations": {
+    "url": "/contact-us/locations",
+    "testName": "contactUsLocations",
+    "auth": false
+  },
+  "legalInformation": {
+    "url": "/legal-information",
+    "testName": "legalInformation",
+    "auth": false
+  },
+  "blog": {
+    "url": "/blog",
+    "testName": "blog",
+    "auth": false
+  },
+  "privacyPolicy": {
+    "url": "/privacy-policy",
+    "testName": "privacyPolicy",
+    "auth": false
+  },
+  "servicesSupportColorManagementInxColorPerfectionColorPerfectionMagazine": {
+    "url": "/services-support/color-management/inx-color-perfection/color-perfection-magazine",
+    "testName": "servicesSupportColorManagementInxColorPerfectionColorPerfectionMagazine",
+    "auth": false
+  },
+  "servicesSupportColorCatalogSupport": {
+    "url": "/services-support/color-catalog-support",
+    "testName": "servicesSupportColorCatalogSupport",
+    "auth": false
+  },
+  "servicesSupportTechnicalServices": {
+    "url": "/services-support/technical-services",
+    "testName": "servicesSupportTechnicalServices",
+    "auth": false
+  },
+  "productsInksAndCoatingsApplicationSpecialtyInksCoatings": {
+    "url": "/products/inks-and-coatings/application/specialty-inks-coatings",
+    "testName": "productsInksAndCoatingsApplicationSpecialtyInksCoatings",
+    "auth": false
+  }
+}

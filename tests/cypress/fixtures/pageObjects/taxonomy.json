@@ -1,0 +1,12 @@
+{
+    "taxonomyTable": "[id='taxonomy'] tbody tr",
+    "taxonomyLink": "a[href='/admin/structure/taxonomy']",
+    "listTermsButton": "a[href*='/taxonomy/term/']:contains('List terms')",
+    "addTermButton": "[class='local-actions__item'] > a",
+    "termNameInput": "input[name='name[0][value]']",
+    "termDescriptionTextarea": "textarea[name='description[0][value]']",
+    "saveButton": "input[id='edit-submit']",
+    "saveAndGoToList": "[id='edit-overview']",
+    "editTermButton": "a[href*='/edit']",
+    "deleteTermButton": "a[href*='/delete']"
+}
