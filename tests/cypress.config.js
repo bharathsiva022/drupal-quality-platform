@@ -189,6 +189,16 @@ module.exports = defineConfig({
       return config;
 
       
-    }
+    },
+     reporter: "mochawesome",
+
+    reporterOptions: {
+      reportDir: "cypress/reports/mochawesome",
+      reportFilename: "test-report",
+      overwrite: true,
+      html: true,        
+      json: true,      
+      inlineAssets: true 
+    },
   },
 });

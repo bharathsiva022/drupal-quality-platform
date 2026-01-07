@@ -10,6 +10,7 @@ import * as contentType from '../../fixtures/pageObjects/contentTypePageObject.j
 import * as ckeditor from '../../fixtures/pageObjects/ckEditor.json';
 import * as frontend from '../../fixtures/pageObjects/front-end.json';
 import * as backend from '../../fixtures/pageObjects/back-end.json';
+import * as newUser from '../../fixtures/pageObjects/addUserPage.json';
 
 
 
@@ -25,7 +26,8 @@ const selectors = Object.assign(
   menuPageObjects,
   contentType,
   frontend,
-  backend
+  backend,
+  newUser
 );
 
 module.exports = selectors;
