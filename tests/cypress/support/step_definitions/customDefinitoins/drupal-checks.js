@@ -135,7 +135,103 @@ Then('I should not see user {string} in people page', (username) => {
     .and('not.contain.text', username);
 });
 
+const adminPath = '/admin/config/search/redirect';
+const base = Cypress.config('baseUrl');
 
+const makeAbsolute = (p) => {
+  if (!p) return null;
+  p = p.trim();
+  if (p.startsWith('http')) return p;
+  if (!p.startsWith('/')) p = '/' + p;
+  return base.replace(/\/$/, '') + p;
+};
 
+When("I open the redirects admin page", () => {
+  cy.request({ url: adminPath, failOnStatusCode: false }).then((res) => {
+    cy.wrap(res.status < 400).as('pageExists');
+    if (res.status < 400) cy.visit(adminPath);
+  });
+});
 
+Then("I validate the first 5 From To redirects", () => {
+  cy.get('@pageExists').then((exists) => {
+    if (!exists) {
+      cy.log("Redirect page not found. Skipping.");
+      return;
+    }
+
+    cy.get('table.views-table tbody tr').each(($row, idx) => {
+      if (idx >= 5) return;
+
+      const fromText = $row
+        .find('td.views-field-redirect-source__path')
+        .text()
+        .trim();
+
+      const toText = $row
+        .find('td.views-field-redirect-redirect__uri a')
+        .attr('href');
+
+      const fromUrl = makeAbsolute(fromText);
+      const toUrl = makeAbsolute(toText);
+
+      cy.visit(fromUrl, { failOnStatusCode: false });
+
+      cy.url().then((currentUrl) => {
+        const normalizedCurrent = currentUrl.replace(/\/$/, '');
+        const normalizedTarget = toUrl.replace(/\/$/, '');
+        const normalizedBase = base.replace(/\/$/, '');
+
+        if (
+          normalizedTarget.endsWith('/home') ||
+          normalizedTarget.endsWith('/homepage')
+        ) {
+          expect(normalizedCurrent).to.eq(normalizedBase);
+        } else {
+          expect(normalizedCurrent).to.eq(normalizedTarget);
+        }
+      });
+    });
+  });
+});
+
+When('I click on main icon', () => {
+  cy.get('a[href="/"], a.site-logo, header a')
+    .filter(':visible')
+    .first()
+    .click();
+});
+
+Then('I should be directed to homepage', () => {
+  const baseUrl = Cypress.config('baseUrl').replace(/\/$/, '');
+
+  cy.url().then((currentUrl) => {
+    expect(currentUrl.replace(/\/$/, '')).to.eq(baseUrl);
+  });
+});
+
+let expectedMenuUrl;
+
+When('I click on menu in header', () => {
+  cy.get('header nav a, header .menu a')
+    .filter(':visible')
+    .not('[href="#"]')
+    .not('[href="/"]')
+    .first()
+    .as('menuLink');
+
+  cy.get('@menuLink').then(($el) => {
+    expectedMenuUrl = $el.prop('href');
+  });
+
+  cy.get('@menuLink').click();
+});
+
+Then('I should be directed to the page', () => {
+  cy.url().then((currentUrl) => {
+    expect(currentUrl.replace(/\/$/, '')).to.eq(
+      expectedMenuUrl.replace(/\/$/, '')
+    );
+  });
+});
 
