@@ -254,6 +254,84 @@ Then("the DB logs page visibility should match the environment", () => {
   });
 });
 
+Then('I should see 100 MB media upload limit', () => {
+  cy.contains('.form-item__description', '100 MB limit')
+    .should('be.visible');
+});
 
+When('I navigate to {string} as admin user', (path) => {
+  cy.visit(path);
+});
+
+Then('I logged the page should be visible for admin', () => {
+  cy.get('body').then(($body) => {
+    const text = $body.text();
+
+    expect(
+      !text.includes('Access denied') &&
+      !text.includes('Page not found'),
+      'Admin should be able to see unpublished content'
+    ).to.be.true;
+  });
+});
+
+When('I navigate to {string} as anonymous user', (path) => {
+  cy.clearCookies();
+  cy.clearLocalStorage();
+
+  cy.visit(path, { failOnStatusCode: false });
+});
+
+Then('I should not see the content', () => {
+  cy.get('body').then(($body) => {
+    const text = $body.text();
+
+    const blocked =
+      text.includes('Access Denied') ||
+      text.includes('Page not found');
+
+    expect(
+      blocked,
+      'Anonymous user should not see unpublished content'
+    ).to.be.true;
+  });
+});
+
+Then('Both css and js aggregators should be checked', () => {
+  cy.get('input[data-drupal-selector="edit-preprocess-css"]')
+    .should('exist')
+    .and('be.checked');
+
+  cy.get('input[data-drupal-selector="edit-preprocess-js"]')
+    .should('exist')
+    .and('be.checked');
+});
+
+Then('g tag should be configured correctly for the environment', () => {
+  const env = Cypress.env('configFile'); 
+
+  cy.document().then((doc) => {
+    const html = doc.documentElement.innerHTML;
+
+    const hasGtag =
+      html.includes('googletagmanager.com/gtag/js') ||
+      html.includes("gtag('config'") ||
+      html.includes('gtag("config"');
+
+    if (env === 'prod') {
+      expect(
+        hasGtag,
+        'Expected g tag to be PRESENT in prod'
+      ).to.be.true;
+    }
+
+    if (env === 'dev' || env ==='uat') {
+      expect(
+        hasGtag,
+        'Expected g tag to be ABSENT in dev'
+      ).to.be.false;
+    }
+  });
+});
 
 
