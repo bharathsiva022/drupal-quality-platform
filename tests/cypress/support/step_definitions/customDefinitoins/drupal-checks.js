@@ -237,22 +237,23 @@ Then('I should be directed to the page', () => {
 
 When("I navigate to the DB logs page", () => {
   cy.request({
-    url: '/admin/report/dblog',
+    url: '/admin/reports/dblog',
     failOnStatusCode: false
   }).as('dblogResponse');
 });
 
-Then("the DB logs page should be {string}", (visibility) => {
+Then("the DB logs page visibility should match the environment", () => {
+  const env = Cypress.env('configFile');
   cy.get('@dblogResponse').then((response) => {
-    if (visibility === "visible") {
+    if (env === 'dev' || env === 'uat') {
       expect(response.status).to.eq(200);
     }
-
-    if (visibility === "not visible") {
+    if (env === 'prod') {
       expect([301, 302, 401, 403, 404]).to.include(response.status);
     }
   });
 });
+
 
 
 
