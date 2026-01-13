@@ -1,12 +1,17 @@
 {
   "baseUrl": "https://devrevamp-inxinternational.pantheonsite.io/",
+
   "retries": {
     "runMode": 1,
     "openMode": 0
   },
-  "defaultCommandTimeout": 25000,
-  "pageLoadTimeout": 60000,
-  "requestTimeout": 20000,
+
+  "timeouts": {
+    "defaultCommand": 25000,
+    "pageLoad": 60000,
+    "request": 20000
+  },
+
   "env": {
     "TAGS": "not @ignore-env-test"
   }

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Test automation for drupal core functionalities",
   "main": "index.js",
-    "cypress-cucumber-preprocessor": {
+  "private": true,
+  "type": "module",
+  "cypress-cucumber-preprocessor": {
     "json": {
       "enabled": true,
       "output": "cypress/reports/cucumber-report/cucumber.json"
@@ -52,10 +54,13 @@
   },
   "devDependencies": {
     "@cypress-audit/lighthouse": "^1.4.2",
+    "@modelcontextprotocol/sdk": "^1.25.2",
     "@percy/cli": "^1.31.2",
     "@percy/cypress": "^3.1.6",
+    "@playwright/test": "^1.57.0",
     "axe-core": "^4.11.0",
     "cypress-axe": "^1.7.0",
-    "multiple-cucumber-html-reporter": "^3.9.3"
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "zod": "^4.3.5"
   }
 }
