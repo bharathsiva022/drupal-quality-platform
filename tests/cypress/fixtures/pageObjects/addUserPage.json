@@ -9,5 +9,17 @@
     "drupal_add_user_submit_button": "#edit-submit",
     "durpal_add_user_button": "#block-claro-local-actions > ul > li > a",
     "drupal_cancel_account_button": "#edit-delete",
-    "drupal_delete_user_account": ":nth-child(4) > .form-item__label"
+    "drupal_delete_user_account": ":nth-child(4) > .form-item__label",
+    "Add_user": "a[data-drupal-link-system-path='admin/people/create']",
+    "company_field" : "[data-drupal-selector*='edit-field-company-address-0-address-organ']",
+    "street_address_field" : "[id='edit-field-company-address-0-address-address-line1']",
+    "city_field": "[id='edit-field-company-address-0-address-locality']",
+    "state_field" : "[id='edit-field-company-address-0-address-administrative-area']",
+    "zip_code_field": "[data-drupal-selector='edit-field-company-address-0-address-postal-code']",
+    "phone_field" : "[data-drupal-selector='edit-field-phone-0-value']",
+    "create_new_user" : "[data-drupal-selector='edit-submit']",
+    "success_message": ".messages--status > .messages__content",
+    "people_search_username_field": "[id='edit-user']",
+    "people_filter_button": "[value='Filter']",
+    "confirm_button": "[data-drupal-selector='edit-submit']"
 }

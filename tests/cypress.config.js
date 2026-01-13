@@ -42,6 +42,15 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     viewportHeight: 1080,
     restartBrowserBetweenSpecFiles: true,
+    reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/reports/mochawesome",
+      reportFilename: "test-report",
+      overwrite: true,
+      html: true,
+      json: true,
+      inlineAssets: true
+    },
     env: {
       filterSpecs: true,
       omitFiltered: true,
@@ -197,8 +206,7 @@ module.exports = defineConfig({
         config.env.TAGS = featureTags;
       }
       return config;
+    },
 
-
-    }
   },
 });
