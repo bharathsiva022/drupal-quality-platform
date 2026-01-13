@@ -43,6 +43,7 @@ import './keywords/genericKeywords/wait'
 import './keywords/genericKeywords/applitools-eyes-commands.js'
 import './keywords/genericKeywords/reusable-commands.js'
 import './keywords/genericKeywords/accept-cookies.js'
+import './mcp-integration.js'
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from failing the test 

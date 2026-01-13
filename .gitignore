@@ -120,3 +120,4 @@ tests/cypress/screenshots
 tests/cypress/reports
 tests/cypress/downloads
 tests/runner-results
+tests/cucumber-messages.ndjson

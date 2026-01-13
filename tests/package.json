@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Test automation for drupal core functionalities",
   "main": "index.js",
+  "private": true,
+  "type": "module",
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-report/cucumber.json"
+    }
+  },
   "scripts": {
     "run:test:dev": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress open --env configFile=dev",
     "run:live:baseline": "cross-env PERCY_BRANCH=live_site CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=prod,TAGS='@visual_existing'",
@@ -45,10 +53,13 @@
   },
   "devDependencies": {
     "@cypress-audit/lighthouse": "^1.4.2",
+    "@modelcontextprotocol/sdk": "^1.25.2",
     "@percy/cli": "^1.31.2",
     "@percy/cypress": "^3.1.6",
+    "@playwright/test": "^1.57.0",
     "axe-core": "^4.11.0",
     "cypress-axe": "^1.7.0",
+    "zod": "^4.3.5",
     "mochawesome": "^7.1.4"
   }
 }

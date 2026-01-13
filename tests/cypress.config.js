@@ -16,7 +16,7 @@ const lighthouseReportDir = path.join(__dirname, "cypress", "reports", "lighthou
 let logPath = process.env.LOG_DIR || path.join(__dirname, "./cypress");
 
 function getConfigurationByFile(file) {
-  const pathToConfigFile = path.resolve(".", "config", `${file}.json`);
+  const pathToConfigFile = path.resolve(".", "config", "env", `${file}.json`);
   return fs.readJson(pathToConfigFile);
 }
 
@@ -42,6 +42,15 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     viewportHeight: 1080,
     restartBrowserBetweenSpecFiles: true,
+    reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/reports/mochawesome",
+      reportFilename: "test-report",
+      overwrite: true,
+      html: true,
+      json: true,
+      inlineAssets: true
+    },
     env: {
       filterSpecs: true,
       omitFiltered: true,
@@ -54,6 +63,11 @@ module.exports = defineConfig({
       hideCredentials: true,
     },
     async setupNodeEvents(cypressOn, config) {
+
+      // Load environment-specific config
+      const file = config.env.configFile || "dev";
+      const featureTags = config.env.TAGS;
+      const environmentFile = await getConfigurationByFile(file);
       // bind to the event we care about
       const on = require("cypress-on-fix")(cypressOn);
 
@@ -64,7 +78,7 @@ module.exports = defineConfig({
       on("task", {
         runLinkChecker() {
           return new Promise((resolve, reject) => {
-            const baseUrl = environmentFile.baseUrl;
+            const baseUrl = config.baseUrl;
             const reportPath = path.resolve(
               `cypress/reports/link-checks-${config.env.configFile || "dev"}.json`
             );
@@ -106,42 +120,42 @@ module.exports = defineConfig({
           return null;
         },
 
-    lighthouse: lighthouse((lighthouseReport, options = {}) => {
-      const json = lighthouseReport.lhr;
+        lighthouse: lighthouse((lighthouseReport, options = {}) => {
+          const json = lighthouseReport.lhr;
 
-      const performanceCategory = json.categories?.performance;
-      if (performanceCategory && typeof performanceCategory.score === 'number') {
-        console.log("Performance score:", performanceCategory.score);
-      } else {
-        console.log("Performance score not found or missing.");
-      }
+          const performanceCategory = json.categories?.performance;
+          if (performanceCategory && typeof performanceCategory.score === 'number') {
+            console.log("Performance score:", performanceCategory.score);
+          } else {
+            console.log("Performance score not found or missing.");
+          }
 
-      const formFactor = options.formFactor || json.configSettings?.formFactor || 'mobile';
-      const reportName = options.reportName || `lh-${formFactor}`;
-      
-      const url = new URL(json.finalDisplayedUrl);
-      let uniqueIdentifier;
-      
-      if (url.pathname === '/' || !url.pathname) {
-        uniqueIdentifier = url.hostname.split('.')[0]; 
-      } else {
-        uniqueIdentifier = url.pathname.replace(/\//g, "_");
-      }
-      if (!uniqueIdentifier) uniqueIdentifier = "homepage";
+          const formFactor = options.formFactor || json.configSettings?.formFactor || 'mobile';
+          const reportName = options.reportName || `lh-${formFactor}`;
 
-      const jsonFile = `${reportName}-${uniqueIdentifier}.json`;
-      const jsonPath = path.join(lighthouseReportDir, jsonFile);
+          const url = new URL(json.finalDisplayedUrl);
+          let uniqueIdentifier;
 
-      fs.writeFileSync(jsonPath, JSON.stringify(json, null, 2));
-      console.log(`JSON report saved to: ${jsonPath}`);
+          if (url.pathname === '/' || !url.pathname) {
+            uniqueIdentifier = url.hostname.split('.')[0];
+          } else {
+            uniqueIdentifier = url.pathname.replace(/\//g, "_");
+          }
+          if (!uniqueIdentifier) uniqueIdentifier = "homepage";
 
-      return null;
-    })
+          const jsonFile = `${reportName}-${uniqueIdentifier}.json`;
+          const jsonPath = path.join(lighthouseReportDir, jsonFile);
+
+          fs.writeFileSync(jsonPath, JSON.stringify(json, null, 2));
+          console.log(`JSON report saved to: ${jsonPath}`);
+
+          return null;
+        })
 
       });
       on("before:browser:launch", (browser = {}, options) => {
         prepareAudit(options);
-        
+
         if (fs.existsSync(downloadDirectory)) {
           fs.rmdirSync(downloadDirectory, { recursive: true });
         }
@@ -162,18 +176,23 @@ module.exports = defineConfig({
 
       config.screenshotsFolder = path.join(logPath, "screenshots");
 
-      // Load environment-specific config
-      const file = config.env.configFile || "dev";
-      const featureTags = config.env.TAGS;
-      const environmentFile = await getConfigurationByFile(file);
-
       // Override config settings with environment-specific values if present
       config.baseUrl = environmentFile.baseUrl || config.baseUrl;
-      config.defaultCommandTimeout =
-        environmentFile.defaultCommandTimeout || config.defaultCommandTimeout;
-      config.pageLoadTimeout =
-        environmentFile.pageLoadTimeout || config.pageLoadTimeout;
-      config.retries = environmentFile.retries || config.retries;
+      if (environmentFile.timeouts) {
+        config.defaultCommandTimeout =
+          environmentFile.timeouts.defaultCommand || config.defaultCommandTimeout;
+
+        config.pageLoadTimeout =
+          environmentFile.timeouts.pageLoad || config.pageLoadTimeout;
+
+        config.requestTimeout =
+          environmentFile.timeouts.request || config.requestTimeout;
+      }
+
+      if (environmentFile.retries) {
+        config.retries = environmentFile.retries;
+      }
+
 
       const { baseUrl, env } = environmentFile;
       config.env = { ...config.env, ...environmentFile.env };
@@ -187,18 +206,7 @@ module.exports = defineConfig({
         config.env.TAGS = featureTags;
       }
       return config;
-
-      
     },
-     reporter: "mochawesome",
 
-    reporterOptions: {
-      reportDir: "cypress/reports/mochawesome",
-      reportFilename: "test-report",
-      overwrite: true,
-      html: true,        
-      json: true,      
-      inlineAssets: true 
-    },
   },
 });
