@@ -235,3 +235,24 @@ Then('I should be directed to the page', () => {
   });
 });
 
+When("I navigate to the DB logs page", () => {
+  cy.request({
+    url: '/admin/report/dblog',
+    failOnStatusCode: false
+  }).as('dblogResponse');
+});
+
+Then("the DB logs page should be {string}", (visibility) => {
+  cy.get('@dblogResponse').then((response) => {
+    if (visibility === "visible") {
+      expect(response.status).to.eq(200);
+    }
+
+    if (visibility === "not visible") {
+      expect([301, 302, 401, 403, 404]).to.include(response.status);
+    }
+  });
+});
+
+
+

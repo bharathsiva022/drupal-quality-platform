@@ -36,3 +36,7 @@ Scenario: Verify clicking on main icon redirects to homepage
 Scenario: Verify header & fotter menu navigation
   When I click on menu in header
   Then I should be directed to the page 
+
+Scenario: DB logs page visibility 
+  When I navigate to the DB logs page
+  Then the DB logs page should be "visible"
