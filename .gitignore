@@ -124,3 +124,5 @@ tests/playwright/html-reports
 tests/playwright/test-results
 tests/cucumber-messages.ndjson
 tests/cypress.env.json
+config
+site.config.yml
