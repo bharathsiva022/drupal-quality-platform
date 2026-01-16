@@ -126,3 +126,7 @@ tests/cucumber-messages.ndjson
 tests/cypress.env.json
 config
 site.config.yml
+module
+source
+templates
+src
