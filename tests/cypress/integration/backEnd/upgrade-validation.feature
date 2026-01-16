@@ -1,6 +1,6 @@
 Feature: Drupal Upgrade Validation
 
-  @regression_be
+  @regression_be @test
   Scenario: Validate key pages after upgrade
     Given I visit the "/company" page
     Then I should see the content title "Company"

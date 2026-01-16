@@ -1,5 +1,5 @@
 {
-  "name": "generic-cypress-test",
+  "name": "qa-mcp-server",
   "version": "1.0.0",
   "description": "Test automation for drupal core functionalities",
   "main": "index.js",

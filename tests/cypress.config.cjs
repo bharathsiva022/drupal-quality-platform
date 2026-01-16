@@ -2,10 +2,9 @@ const fs = require("fs-extra");
 const path = require("path");
 const { exec } = require("child_process");
 const { defineConfig } = require("cypress");
+const { lighthouse, prepareAudit } = require("@cypress-audit/lighthouse");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify");
-
-const { lighthouse, prepareAudit } = require("@cypress-audit/lighthouse");
 
 const RESULT_FOLDER = "results";
 const downloadDirectory = path.join(__dirname, "..", RESULT_FOLDER);
@@ -16,7 +15,7 @@ const lighthouseReportDir = path.join(__dirname, "cypress", "reports", "lighthou
 let logPath = process.env.LOG_DIR || path.join(__dirname, "./cypress");
 
 function getConfigurationByFile(file) {
-  const pathToConfigFile = path.resolve(".", "config", "env", `${file}.json`);
+  const pathToConfigFile = path.resolve(__dirname, "config", "env", `${file}.json`);
   return fs.readJson(pathToConfigFile);
 }
 
