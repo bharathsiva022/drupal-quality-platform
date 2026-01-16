@@ -119,5 +119,8 @@ tests/cypress/videos
 tests/cypress/screenshots
 tests/cypress/reports
 tests/cypress/downloads
-tests/runner-results
+tests/runner-results/
+tests/playwright/html-reports
+tests/playwright/test-results
 tests/cucumber-messages.ndjson
+tests/cypress.env.json
