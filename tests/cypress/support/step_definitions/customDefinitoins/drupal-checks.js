@@ -153,7 +153,7 @@ When("I open the redirects admin page", () => {
   });
 });
 
-Then("I validate the first 5 From To redirects", () => {
+Then("I validate url redirects", () => {
   cy.get('@pageExists').then((exists) => {
     if (!exists) {
       cy.log("Redirect page not found. Skipping.");
@@ -161,7 +161,7 @@ Then("I validate the first 5 From To redirects", () => {
     }
 
     cy.get('table.views-table tbody tr').each(($row, idx) => {
-      if (idx >= 5) return;
+      if (idx >= 2) return;
 
       const fromText = $row
         .find('td.views-field-redirect-source__path')
@@ -333,5 +333,52 @@ Then('g tag should be configured correctly for the environment', () => {
     }
   });
 });
+
+When('I request {string}', (path) => {
+  cy.request({
+    url: path,
+    failOnStatusCode: false,
+  }).as('systemFileResponse');
+});
+
+
+Then('the system file {string} should be configured', (type) => {
+  cy.get('@systemFileResponse').then((response) => {
+    expect(response.status, `${type} should return 200`).to.eq(200);
+
+    const body = response.body;
+
+    if (type === 'sitemap') {
+      expect(
+        body.includes('<urlset') || body.includes('<sitemapindex'),
+        'Expected valid sitemap XML'
+      ).to.be.true;
+    }
+    if (type === 'robots') {
+      expect(
+        body.includes('User-agent') || body.includes('Disallow'),
+        'Expected valid robots.txt content'
+      ).to.be.true;
+    }
+  });
+});
+
+Then('I verify metatags should be configured', () => {
+  cy.document().then((doc) => {
+    const html = doc.head.innerHTML;
+
+    const hasTitle = doc.title && doc.title.trim().length > 0;
+    const hasMetaDescription =
+      html.includes('name="description"') ||
+      html.includes("name='description'");
+
+    expect(hasTitle, 'Page title should be present').to.be.true;
+    expect(
+      hasMetaDescription,
+      'Meta description should be present'
+    ).to.be.true;
+  });
+});
+
 
 

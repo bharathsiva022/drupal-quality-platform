@@ -20,7 +20,7 @@
     "run:dev:vs:uat": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=uat CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_existing'",
     "run:pr:branch:vs:uat/dev/live": "cross-env PERCY_TARGET_BRANCH=<uat/dev/live_site> CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=<Your local accessable file>,TAGS='@visual_existing'",
     "run:dev:vs:figma": "cross-env PERCY_BRANCH=dev_vs_figma PERCY_TARGET_BRANCH=figma_design CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_redesign'",
-    "run:test:headless": "cross-env CYPRESS_username=Vidya CYPRESS_password=Friendship!123 cypress run --browser chrome --env configFile=dev,TAGS='@drupal_checks'"
+    "run:test:headless": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --browser chrome --env configFile=dev,TAGS='@drupal_checks'"
   },
   "repository": {
     "type": "git",

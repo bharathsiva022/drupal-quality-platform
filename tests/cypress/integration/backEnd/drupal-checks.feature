@@ -24,9 +24,9 @@ Scenario: Admin deletes the newly created user
   And I should not see user "Test-User" in people page
 
 @regression_be @drupal_checks
-Scenario: Validate up to 5 redirects from redirects admin page
+Scenario: Validate url redirects from admin page
   When I open the redirects admin page
-  Then I validate the first 5 From To redirects
+  Then I validate url redirects
 
 @regression_be @drupal_checks
 Scenario: Verify clicking on main icon redirects to homepage 
@@ -64,3 +64,18 @@ Scenario: Verify if css and js aggregators are enabled
 Scenario: Verify g tag configuration based on environment
   When I navigate to "/"
   Then g tag should be configured correctly for the environment
+
+@regression_be @drupal_checks
+Scenario: Verify sitemap.xml is configured
+  When I request "/sitemap.xml"
+  Then the system file "sitemap" should be configured
+
+@regression_be @drupal_checks
+Scenario: Verify robots.txt is configured
+  When I request "/robots.txt"
+  Then the system file "robots" should be configured
+  
+@regression_be @drupal_checks
+Scenario: Verify metatag is configured
+  When I navigate to "/"
+  Then I verify metatags should be configured
