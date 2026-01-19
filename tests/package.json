@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "run:test:dev": "cross-env CYPRESS_username=Vidya CYPRESS_password=Friendship!123 cypress open --browser chrome --env configFile=dev",
+    "run:test:dev": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress open --browser chrome --env configFile=dev",
     "run:live:baseline": "cross-env PERCY_BRANCH=live_site CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=prod,TAGS='@visual_existing'",
     "run:components:live:vs:dev": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=components_baseline CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=prod,TAGS='@component_existing'",
     "run:dev:vs:live": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=live_site CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_existing'",
