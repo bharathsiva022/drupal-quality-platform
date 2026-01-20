@@ -1,38 +1,33 @@
-const {
-  Given,
-  When,
-  Then,
-} = require("@badeball/cypress-cucumber-preprocessor");
+const { Given, Then } = require("@badeball/cypress-cucumber-preprocessor");
 
 
-let siteConfig;
-let authResponse;
+let currentEnv;
 
-
-Given('I load the site configuration from {string}', (fileName) => {
-  cy.readFile(`config/${fileName}`).then((config) => {
-    siteConfig = config;
-  });
+Given("I load the site configuration based on environment", () => {
+  currentEnv = Cypress.env("configFile") || "dev";
 });
-When('I check authentication protection for the configured site', () => {
+
+Then("the shield status should match the environment", () => {
+  const urlToTest = Cypress.config("baseUrl");
   cy.request({
-    url: siteConfig.baseUrl,
+    url: urlToTest,
     failOnStatusCode: false,
   }).then((response) => {
-    authResponse = response;
+    const hasShield =
+      response.status === 401 &&
+      response.headers["www-authenticate"]?.includes("Basic");
+
+    const protectedEnvs = ["dev", "uat", "test"];
+    const shouldHaveShield = protectedEnvs.some((env) =>
+      currentEnv.toLowerCase().includes(env)
+    );
+
+    if (shouldHaveShield) {
+      expect(hasShield, `Shield should be ENABLED in ${currentEnv}`).to.be.true;
+    } else {
+      expect(hasShield, `Shield should be DISABLED in ${currentEnv}`).to.be.false;
+    }
   });
-});
-
-Then('the shield {string} be enabled', (status) => {
-  const hasShield =
-    authResponse.status === 401 &&
-    authResponse.headers['www-authenticate']?.includes('Basic');
-
-  if (status === 'should') {
-    expect(hasShield, 'Shield should be enabled').to.be.true;
-  } else {
-    expect(hasShield, 'Shield should NOT be enabled').to.be.false;
-  }
 });
 
 Then("large images should be lazy loaded", () => {
