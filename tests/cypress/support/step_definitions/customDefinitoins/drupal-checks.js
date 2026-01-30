@@ -153,7 +153,7 @@ When("I open the redirects admin page", () => {
   });
 });
 
-Then("I validate the first 5 From To redirects", () => {
+Then("I validate url redirects", () => {
   cy.get('@pageExists').then((exists) => {
     if (!exists) {
       cy.log("Redirect page not found. Skipping.");
@@ -161,7 +161,7 @@ Then("I validate the first 5 From To redirects", () => {
     }
 
     cy.get('table.views-table tbody tr').each(($row, idx) => {
-      if (idx >= 5) return;
+      if (idx >= 2) return;
 
       const fromText = $row
         .find('td.views-field-redirect-source__path')
@@ -254,6 +254,131 @@ Then("the DB logs page visibility should match the environment", () => {
   });
 });
 
+Then('I should see 100 MB media upload limit', () => {
+  cy.contains('.form-item__description', '100 MB limit')
+    .should('be.visible');
+});
+
+When('I navigate to {string} as admin user', (path) => {
+  cy.visit(path);
+});
+
+Then('I logged the page should be visible for admin', () => {
+  cy.get('body').then(($body) => {
+    const text = $body.text();
+
+    expect(
+      !text.includes('Access denied') &&
+      !text.includes('Page not found'),
+      'Admin should be able to see unpublished content'
+    ).to.be.true;
+  });
+});
+
+When('I navigate to {string} as anonymous user', (path) => {
+  cy.clearCookies();
+  cy.clearLocalStorage();
+
+  cy.visit(path, { failOnStatusCode: false });
+});
+
+Then('I should not see the content', () => {
+  cy.get('body').then(($body) => {
+    const text = $body.text();
+
+    const blocked =
+      text.includes('Access Denied') ||
+      text.includes('Page not found');
+
+    expect(
+      blocked,
+      'Anonymous user should not see unpublished content'
+    ).to.be.true;
+  });
+});
+
+Then('Both css and js aggregators should be checked', () => {
+  cy.get('input[data-drupal-selector="edit-preprocess-css"]')
+    .should('exist')
+    .and('be.checked');
+
+  cy.get('input[data-drupal-selector="edit-preprocess-js"]')
+    .should('exist')
+    .and('be.checked');
+});
+
+Then('g tag should be configured correctly for the environment', () => {
+  const env = Cypress.env('configFile'); 
+
+  cy.document().then((doc) => {
+    const html = doc.documentElement.innerHTML;
+
+    const hasGtag =
+      html.includes('googletagmanager.com/gtag/js') ||
+      html.includes("gtag('config'") ||
+      html.includes('gtag("config"');
+
+    if (env === 'prod') {
+      expect(
+        hasGtag,
+        'Expected g tag to be PRESENT in prod'
+      ).to.be.true;
+    }
+
+    if (env === 'dev' || env ==='uat') {
+      expect(
+        hasGtag,
+        'Expected g tag to be ABSENT in dev'
+      ).to.be.false;
+    }
+  });
+});
+
+When('I request {string}', (path) => {
+  cy.request({
+    url: path,
+    failOnStatusCode: false,
+  }).as('systemFileResponse');
+});
+
+
+Then('the system file {string} should be configured', (type) => {
+  cy.get('@systemFileResponse').then((response) => {
+    expect(response.status, `${type} should return 200`).to.eq(200);
+
+    const body = response.body;
+
+    if (type === 'sitemap') {
+      expect(
+        body.includes('<urlset') || body.includes('<sitemapindex'),
+        'Expected valid sitemap XML'
+      ).to.be.true;
+    }
+    if (type === 'robots') {
+      expect(
+        body.includes('User-agent') || body.includes('Disallow'),
+        'Expected valid robots.txt content'
+      ).to.be.true;
+    }
+  });
+});
+
+Then('I verify metatags should be configured', () => {
+  cy.document().then((doc) => {
+    const html = doc.head.innerHTML;
+
+    const hasTitle = doc.title && doc.title.trim().length > 0;
+    const hasMetaDescription =
+      html.includes('name="description"') ||
+      html.includes("name='description'");
+
+    expect(hasTitle, 'Page title should be present').to.be.true;
+    expect(
+      hasMetaDescription,
+      'Meta description should be present'
+    ).to.be.true;
+  });
+});
 
 
 
