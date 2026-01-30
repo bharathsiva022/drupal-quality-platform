@@ -137,42 +137,229 @@ export async function triageTestFailures(args) {
 // SUMMARIZE TEST RUN
 // ============================================================================
 
+// ============================================================================
+// IMPROVED SUMMARIZE TEST RUN
+// ============================================================================
+
 export async function summarizeTestRun(args) {
   const { cypressReportUri, playwrightReportUri } = args;
   
-  const countFailures = (uri) => {
+  /**
+   * Parse Cypress JSON report structure
+   * Cypress reports typically have a structure like:
+   * { results: [{ suites: [{ tests: [{ state: "passed"|"failed", ... }] }] }] }
+   */
+  const parseCypressReport = (uri) => {
     try {
       const filePath = assertAllowedPath(resolveQaUri(uri));
       
       if (!fs.existsSync(filePath)) {
-        return 0;
+        return { failures: 0, passes: 0, total: 0, error: 'File not found' };
       }
       
-      const text = fs.readFileSync(filePath, "utf-8").toLowerCase();
-      return (text.match(/failed|error|timeout|403/g) || []).length;
+      const content = fs.readFileSync(filePath, "utf-8");
+      const report = JSON.parse(content);
+      
+      let failures = 0;
+      let passes = 0;
+      let pending = 0;
+      let total = 0;
+      
+      // Handle different Cypress report structures
+      if (report.results && Array.isArray(report.results)) {
+        // Mochawesome format
+        report.results.forEach(result => {
+          if (result.suites && Array.isArray(result.suites)) {
+            result.suites.forEach(suite => {
+              if (suite.tests && Array.isArray(suite.tests)) {
+                suite.tests.forEach(test => {
+                  total++;
+                  if (test.state === 'failed' || test.fail) {
+                    failures++;
+                  } else if (test.state === 'passed' || test.pass) {
+                    passes++;
+                  } else if (test.state === 'pending' || test.pending) {
+                    pending++;
+                  }
+                });
+              }
+            });
+          }
+        });
+      } else if (report.stats) {
+        // Standard Mocha/Cypress stats format
+        failures = report.stats.failures || 0;
+        passes = report.stats.passes || 0;
+        pending = report.stats.pending || 0;
+        total = report.stats.tests || 0;
+      } else if (report.tests && Array.isArray(report.tests)) {
+        // Direct tests array format
+        report.tests.forEach(test => {
+          total++;
+          if (test.state === 'failed' || test.fail) {
+            failures++;
+          } else if (test.state === 'passed' || test.pass) {
+            passes++;
+          } else if (test.state === 'pending' || test.pending) {
+            pending++;
+          }
+        });
+      }
+      
+      return { failures, passes, pending, total, error: null };
     } catch (error) {
-      console.error(`[Summary] Error reading ${uri}:`, error.message);
-      return 0;
+      console.error(`[Cypress Parse] Error reading ${uri}:`, error.message);
+      return { failures: 0, passes: 0, total: 0, error: error.message };
     }
   };
   
-  const cypressFailures = countFailures(cypressReportUri);
-  const playwrightFailures = countFailures(playwrightReportUri);
-  const totalFailures = cypressFailures + playwrightFailures;
+  /**
+   * Parse Playwright JSON report structure
+   * Playwright reports typically have:
+   * { suites: [{ suites: [], specs: [{ tests: [{ results: [{ status: "passed"|"failed"|... }] }] }] }] }
+   */
+  const parsePlaywrightReport = (uri) => {
+    try {
+      const filePath = assertAllowedPath(resolveQaUri(uri));
+      
+      if (!fs.existsSync(filePath)) {
+        return { failures: 0, passes: 0, total: 0, error: 'File not found' };
+      }
+      
+      const content = fs.readFileSync(filePath, "utf-8");
+      const report = JSON.parse(content);
+      
+      let failures = 0;
+      let passes = 0;
+      let skipped = 0;
+      let flaky = 0;
+      let total = 0;
+      
+      // Recursive function to traverse Playwright suite structure
+      const traverseSuites = (suites) => {
+        if (!Array.isArray(suites)) return;
+        
+        suites.forEach(suite => {
+          // Process specs in this suite
+          if (suite.specs && Array.isArray(suite.specs)) {
+            suite.specs.forEach(spec => {
+              if (spec.tests && Array.isArray(spec.tests)) {
+                spec.tests.forEach(test => {
+                  if (test.results && Array.isArray(test.results)) {
+                    test.results.forEach(result => {
+                      total++;
+                      const status = result.status;
+                      
+                      if (status === 'passed') {
+                        passes++;
+                      } else if (status === 'failed') {
+                        failures++;
+                      } else if (status === 'skipped') {
+                        skipped++;
+                      } else if (status === 'timedOut') {
+                        failures++;
+                      } else if (status === 'interrupted') {
+                        skipped++;
+                      }
+                    });
+                  }
+                  
+                  // Check if test is flaky
+                  if (test.results && test.results.length > 1) {
+                    const hasFailure = test.results.some(r => r.status === 'failed');
+                    const hasPass = test.results.some(r => r.status === 'passed');
+                    if (hasFailure && hasPass) {
+                      flaky++;
+                    }
+                  }
+                });
+              }
+            });
+          }
+          
+          // Recursively process nested suites
+          if (suite.suites && Array.isArray(suite.suites)) {
+            traverseSuites(suite.suites);
+          }
+        });
+      };
+      
+      // Start traversal
+      if (report.suites && Array.isArray(report.suites)) {
+        traverseSuites(report.suites);
+      } else if (report.stats) {
+        // Alternative format with stats
+        failures = report.stats.unexpected || report.stats.failed || 0;
+        passes = report.stats.expected || report.stats.passed || 0;
+        skipped = report.stats.skipped || 0;
+        flaky = report.stats.flaky || 0;
+        total = (report.stats.expected || 0) + (report.stats.unexpected || 0) + (report.stats.skipped || 0);
+      }
+      
+      return { failures, passes, skipped, flaky, total, error: null };
+    } catch (error) {
+      console.error(`[Playwright Parse] Error reading ${uri}:`, error.message);
+      return { failures: 0, passes: 0, total: 0, error: error.message };
+    }
+  };
+  
+  // Parse both reports
+  const cypressResult = parseCypressReport(cypressReportUri);
+  const playwrightResult = parsePlaywrightReport(playwrightReportUri);
+  
+  const totalFailures = cypressResult.failures + playwrightResult.failures;
+  const totalPasses = cypressResult.passes + playwrightResult.passes;
+  const totalTests = cypressResult.total + playwrightResult.total;
+  
+  // Build detailed summary
+  const summary = {
+    cypress: {
+      failures: cypressResult.failures,
+      passes: cypressResult.passes,
+      pending: cypressResult.pending || 0,
+      total: cypressResult.total,
+      error: cypressResult.error
+    },
+    playwright: {
+      failures: playwrightResult.failures,
+      passes: playwrightResult.passes,
+      skipped: playwrightResult.skipped || 0,
+      flaky: playwrightResult.flaky || 0,
+      total: playwrightResult.total,
+      error: playwrightResult.error
+    },
+    overall: {
+      totalFailures,
+      totalPasses,
+      totalTests,
+      passRate: totalTests > 0 ? ((totalPasses / totalTests) * 100).toFixed(2) + '%' : 'N/A'
+    }
+  };
+  
+  // Determine status
+  let status = 'PASS';
+  let recommendation = '✅ All tests passed - release looks safe';
+  
+  if (totalFailures > 0) {
+    status = 'FAIL';
+    recommendation = `⚠️ ${totalFailures} test(s) failed - review failures before release`;
+  } else if (playwrightResult.flaky > 0) {
+    status = 'WARNING';
+    recommendation = `⚠️ ${playwrightResult.flaky} flaky test(s) detected - monitor stability`;
+  }
+  
+  if (cypressResult.error || playwrightResult.error) {
+    status = 'ERROR';
+    recommendation = '🔴 Error parsing one or more reports - check report files';
+  }
   
   return {
     content: [{
       type: "text",
       text: JSON.stringify({
-        summary: {
-          cypressFailures,
-          playwrightFailures,
-          totalFailures
-        },
-        status: totalFailures === 0 ? "PASS" : "FAIL",
-        recommendation: totalFailures === 0 
-          ? "✅ Release looks safe - no failures detected"
-          : "⚠️ Review failures before release"
+        summary,
+        status,
+        recommendation
       }, null, 2)
     }]
   };
