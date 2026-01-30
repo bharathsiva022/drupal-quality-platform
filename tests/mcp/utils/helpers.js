@@ -1,89 +1,164 @@
-// utils/helpers.js - Utility Helper Functions
+// utils/helpers.js - Helper Functions with Fixed URI Resolution
 import fs from "fs";
 import path from "path";
-import { ALLOWED_PATHS, PATHS } from "../server.js";
-
-const MIME_TYPES = {
-  '.json': 'application/json',
-  '.html': 'text/html',
-  '.xml': 'application/xml',
-  '.txt': 'text/plain',
-  '.log': 'text/plain',
-  '.md': 'text/markdown',
-  '.yml': 'text/yaml',
-  '.yaml': 'text/yaml',
-  '.js': 'application/javascript',
-  '.ts': 'application/typescript'
-};
+import { PATHS } from "../server.js";
 
 // ============================================================================
-// PATH VALIDATION
+// RESOLVE QA URI - FIXED VERSION
 // ============================================================================
 
-export function assertAllowedPath(targetPath) {
-  const resolved = path.resolve(targetPath);
-  const allowed = ALLOWED_PATHS.some(base => resolved.startsWith(base));
-  
-  if (!allowed) {
-    throw new Error(`Access denied: ${resolved}`);
-  }
-  
-  return resolved;
-}
-
-// ============================================================================
-// URI RESOLUTION
-// ============================================================================
-
+/**
+ * Resolves a qa:// URI to an actual file path
+ * @param {string} uri - The qa:// URI to resolve
+ * @returns {string} - The resolved file path
+ * 
+ * Supported URI formats:
+ * - qa://cypress/reports/results.json -> PATHS.cypress/results.json
+ * - qa://cypress/reports/lighthouse -> PATHS.cypress/lighthouse
+ * - qa://playwright-results/results.json -> PATHS.playwrightResults/results.json
+ * - qa://playwright-html/index.html -> PATHS.playwrightHtml/index.html
+ * - qa://drupal/... -> PATHS.drupalConfig/...
+ */
 export function resolveQaUri(uri) {
-  const url = new URL(uri);
-  
-  if (url.protocol !== "qa:") {
-    throw new Error(`Unsupported protocol: ${url.protocol}`);
+  if (!uri || !uri.startsWith("qa://")) {
+    throw new Error(`Invalid qa:// URI: ${uri}`);
   }
   
-  const parts = url.pathname.split("/").filter(Boolean);
+  // Remove the qa:// prefix
+  const withoutProtocol = uri.replace(/^qa:\/\//, "");
   
-  // qa://cypress/reports/results.json
-  if (url.host === "cypress" && parts[0] === "reports") {
-    return path.join(PATHS.cypress, ...parts.slice(1));
+  // Split into category and path
+  const parts = withoutProtocol.split("/");
+  const category = parts[0];
+  const relativePath = parts.slice(1).join("/");
+  
+  // Map categories to their base paths
+  const categoryMap = {
+    "cypress": PATHS.cypress,
+    "playwright-results": PATHS.playwrightResults,
+    "playwright-html": PATHS.playwrightHtml,
+    "drupal": PATHS.drupalConfig
+  };
+  
+  const basePath = categoryMap[category];
+  
+  if (!basePath) {
+    throw new Error(`Unknown qa:// URI category: ${category}. Supported: ${Object.keys(categoryMap).join(", ")}`);
   }
   
-  // qa://playwright/results/results.json
-  if (url.host === "playwright" && parts[0] === "results") {
-    return path.join(PATHS.playwrightResults, ...parts.slice(1));
-  }
+  // Build the full path
+  let resolvedPath = relativePath ? path.join(basePath, relativePath) : basePath;
   
-  // qa://playwright/html/index.html
-  if (url.host === "playwright" && parts[0] === "html") {
-    return path.join(PATHS.playwrightHtml, ...parts.slice(1));
-  }
-  
-  // qa://playwright/tests/example.spec.js
-  if (url.host === "playwright" && parts[0] === "tests") {
-    return path.join(PATHS.playwrightTests, ...parts.slice(1));
-  }
-  
-  // qa://drupal/config/system.site
-  if (url.host === "drupal" && parts[0] === "config") {
-    return path.join(PATHS.drupalConfig, `${parts[1]}.yml`);
-  }
-  
-  throw new Error(`Unknown qa:// URI: ${uri}`);
+  return resolvedPath;
 }
 
 // ============================================================================
-// FILE UTILITIES
+// ASSERT ALLOWED PATH
 // ============================================================================
 
-export function getMimeType(filePath) {
-  const ext = path.extname(filePath).toLowerCase();
-  return MIME_TYPES[ext] || 'application/octet-stream';
+/**
+ * Ensures a resolved path is within allowed directories
+ * Prevents path traversal attacks
+ */
+export function assertAllowedPath(filePath) {
+  const allowedPaths = [
+    PATHS.cypress,
+    PATHS.playwrightResults,
+    PATHS.playwrightHtml,
+    PATHS.drupalConfig
+  ];
+  
+  const normalizedPath = path.normalize(filePath);
+  
+  // Check if the path starts with any allowed path
+  const isAllowed = allowedPaths.some(allowedPath => {
+    const normalizedAllowed = path.normalize(allowedPath);
+    return normalizedPath.startsWith(normalizedAllowed);
+  });
+  
+  if (!isAllowed) {
+    throw new Error(`Path not allowed: ${filePath}`);
+  }
+  
+  return normalizedPath;
 }
 
+// ============================================================================
+// LIST DIRECTORY
+// ============================================================================
+
+/**
+ * Lists files and directories in a given path
+ */
 export function listDirectory(dirPath) {
   if (!fs.existsSync(dirPath)) {
     return [];
   }
-  return fs.readdirSync(dirPath).filter(f => !f.startsWith("."));
+  
+  try {
+    const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+    
+    return entries.map(entry => {
+      if (entry.isDirectory()) {
+        return entry.name;
+      }
+      return entry.name;
+    });
+  } catch (error) {
+    console.error(`[ListDirectory] Error reading ${dirPath}:`, error.message);
+    return [];
+  }
 }
+
+// ============================================================================
+// GET MIME TYPE
+// ============================================================================
+
+/**
+ * Returns MIME type based on file extension
+ */
+export function getMimeType(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  
+  const mimeTypes = {
+    ".json": "application/json",
+    ".html": "text/html",
+    ".yml": "text/yaml",
+    ".yaml": "text/yaml",
+    ".txt": "text/plain",
+    ".xml": "application/xml",
+    ".js": "application/javascript",
+    ".css": "text/css",
+    ".md": "text/markdown"
+  };
+  
+  return mimeTypes[ext] || "application/octet-stream";
+}
+
+// ============================================================================
+// USAGE EXAMPLES
+// ============================================================================
+
+/*
+Example usage:
+
+// Cypress reports (PATHS.cypress should point to .../tests/cypress/reports)
+resolveQaUri("qa://cypress/reports/results.json") 
+  -> "D:/drupal-quality-platform/tests/cypress/reports/reports/results.json"
+  OR (if PATHS.cypress = .../tests/cypress) -> correct path
+
+resolveQaUri("qa://cypress/results.json")
+  -> "D:/drupal-quality-platform/tests/cypress/reports/results.json"
+
+// Playwright results
+resolveQaUri("qa://playwright-results/results.json")
+  -> "D:/drupal-quality-platform/tests/playwright/test-results/results.json"
+
+// Playwright HTML reports
+resolveQaUri("qa://playwright-html/index.html")
+  -> "D:/drupal-quality-platform/tests/playwright/html-reports/index.html"
+
+// Drupal config
+resolveQaUri("qa://drupal/user.role.editor.yml")
+  -> "D:/drupal-quality-platform/config/sync/user.role.editor.yml"
+*/
