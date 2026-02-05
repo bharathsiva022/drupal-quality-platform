@@ -1,0 +1,317 @@
+{
+    "home": {
+      "url": "/",
+      "testName": "home",
+      "auth": false
+    },
+    "expertise_care_delivery": {
+      "url": "/expertise/care-delivery",
+      "testName": "expertise_care_delivery",
+      "auth": false
+    },
+    "expertise_digital_it_operations": {
+      "url": "/expertise/digital-it-operations",
+      "testName": "expertise_digital_it_operations",
+      "auth": false
+    },
+    "chartis_top_reads": {
+      "url": "/chartis-top-reads",
+      "testName": "chartis_top_reads",
+      "auth": false
+    },
+    "expertise_oncology_solutions": {
+      "url": "/expertise/oncology-solutions",
+      "testName": "expertise_oncology_solutions",
+      "auth": false
+    },
+    "insights_receive_our_latest_thinking": {
+      "url": "/insights/receive-our-latest-thinking",
+      "testName": "insights_receive_our_latest_thinking",
+      "auth": false
+    },
+    "insights": {
+      "url": "/insights",
+      "testName": "insights",
+      "auth": false
+    },
+    "insights_understanding_healthcare_maturity_curve_guides_successful_private_equity_investing": {
+      "url": "/insights/understanding-healthcare-maturity-curve-guides-successful-private-equity-investing",
+      "testName": "insights_understanding_healthcare_maturity_curve_guides_successful_private_equity_investing",
+      "auth": false
+    },
+    "client_results_sustainable_quality_houston_methodist_focuses_alignment_and_accountability_jumping": {
+      "url": "/client-results/sustainable-quality-houston-methodist-focuses-alignment-and-accountability-jumping",
+      "testName": "client_results_sustainable_quality_houston_methodist_focuses_alignment_and_accountability_jumping",
+      "auth": false
+    },
+    "about_news": {
+      "url": "/about/news",
+      "testName": "about_news",
+      "auth": false
+    },
+    "expertise_mergers_and_integration": {
+      "url": "/expertise/mergers-and-integration",
+      "testName": "expertise_mergers_and_integration",
+      "auth": false
+    },
+    "client_results_potential_proven_value_bronson_healthcare_cracks_code_ai": {
+      "url": "/client-results/potential-proven-value-bronson-healthcare-cracks-code-ai",
+      "testName": "client_results_potential_proven_value_bronson_healthcare_cracks_code_ai",
+      "auth": false
+    },
+    "privacy_policy": {
+      "url": "/privacy-policy",
+      "testName": "privacy_policy",
+      "auth": false
+    },
+    "expertise_private_equity_advisory": {
+      "url": "/expertise/private-equity-advisory",
+      "testName": "expertise_private_equity_advisory",
+      "auth": false
+    },
+    "insights_setting_course_better_healthcare_ai_consumerism_and_trust_based_alliances": {
+      "url": "/insights/setting-course-better-healthcare-ai-consumerism-and-trust-based-alliances",
+      "testName": "insights_setting_course_better_healthcare_ai_consumerism_and_trust_based_alliances",
+      "auth": false
+    },
+    "expertise_analytics_architecture": {
+      "url": "/expertise/analytics-architecture",
+      "testName": "expertise_analytics_architecture",
+      "auth": false
+    },
+    "insights_medicare_advantage_health_plan_outlook_2026": {
+      "url": "/insights/medicare-advantage-health-plan-outlook-2026",
+      "testName": "insights_medicare_advantage_health_plan_outlook_2026",
+      "auth": false
+    },
+    "campaigns_believe_better": {
+      "url": "/campaigns/believe-better",
+      "testName": "campaigns_believe_better",
+      "auth": false
+    },
+    "expertise_high_reliability_care": {
+      "url": "/expertise/high-reliability-care",
+      "testName": "expertise_high_reliability_care",
+      "auth": false
+    },
+    "expertise_consumer_access": {
+      "url": "/expertise/consumer-access",
+      "testName": "expertise_consumer_access",
+      "auth": false
+    },
+    "expertise_exit_planning": {
+      "url": "/expertise/exit-planning",
+      "testName": "expertise_exit_planning",
+      "auth": false
+    },
+    "expertise_strategic_transformation": {
+      "url": "/expertise/strategic-transformation",
+      "testName": "expertise_strategic_transformation",
+      "auth": false
+    },
+    "about_our_people": {
+      "url": "/about/our-people",
+      "testName": "about_our_people",
+      "auth": false
+    },
+    "expertise_academic_alignment": {
+      "url": "/expertise/academic-alignment",
+      "testName": "expertise_academic_alignment",
+      "auth": false
+    },
+    "all_insights": {
+      "url": "/all-insights",
+      "testName": "all_insights",
+      "auth": false
+    },
+    "expertise_strategic_planning": {
+      "url": "/expertise/strategic-planning",
+      "testName": "expertise_strategic_planning",
+      "auth": false
+    },
+    "expertise_clinical_technology_innovation": {
+      "url": "/expertise/clinical-technology-innovation",
+      "testName": "expertise_clinical_technology_innovation",
+      "auth": false
+    },
+    "insights_medicare_advantage_market_growth_slows_amid_intensified_headwinds": {
+      "url": "/insights/medicare-advantage-market-growth-slows-amid-intensified-headwinds",
+      "testName": "insights_medicare_advantage_market_growth_slows_amid_intensified_headwinds",
+      "auth": false
+    },
+    "expertise_rural_health": {
+      "url": "/expertise/rural-health",
+      "testName": "expertise_rural_health",
+      "auth": false
+    },
+    "about_contact_us": {
+      "url": "/about/contact-us",
+      "testName": "about_contact_us",
+      "auth": false
+    },
+    "campaigns_hospital_home_collection": {
+      "url": "/campaigns/hospital-home-collection",
+      "testName": "campaigns_hospital_home_collection",
+      "auth": false
+    },
+    "expertise_revenue_cycle_management": {
+      "url": "/expertise/revenue-cycle-management",
+      "testName": "expertise_revenue_cycle_management",
+      "auth": false
+    },
+    "expertise_high_performing_medical_group": {
+      "url": "/expertise/high-performing-medical-group",
+      "testName": "expertise_high_performing_medical_group",
+      "auth": false
+    },
+    "insights_one_big_beautiful_bill_one_big_brutal_truth_were_going_need_bigger_boat": {
+      "url": "/insights/one-big-beautiful-bill-one-big-brutal-truth-were-going-need-bigger-boat",
+      "testName": "insights_one_big_beautiful_bill_one_big_brutal_truth_were_going_need_bigger_boat",
+      "auth": false
+    },
+    "client_results_power_strategic_planning_health_plan_ensures_optimal_roi_provider_network_platform": {
+      "url": "/client-results/power-strategic-planning-health-plan-ensures-optimal-roi-provider-network-platform",
+      "testName": "client_results_power_strategic_planning_health_plan_ensures_optimal_roi_provider_network_platform",
+      "auth": false
+    },
+    "expertise_transaction_diligence": {
+      "url": "/expertise/transaction-diligence",
+      "testName": "expertise_transaction_diligence",
+      "auth": false
+    },
+    "client_results_freestanding_childrens_hospitals_southern_california_merge_improve_care_children": {
+      "url": "/client-results/freestanding-childrens-hospitals-southern-california-merge-improve-care-children",
+      "testName": "client_results_freestanding_childrens_hospitals_southern_california_merge_improve_care_children",
+      "auth": false
+    },
+    "expertise_payer_transformation": {
+      "url": "/expertise/payer-transformation",
+      "testName": "expertise_payer_transformation",
+      "auth": false
+    },
+    "about_chartis": {
+      "url": "/about-chartis",
+      "testName": "about_chartis",
+      "auth": false
+    },
+    "about_careers": {
+      "url": "/about/careers",
+      "testName": "about_careers",
+      "auth": false
+    },
+    "expertise_financial_transformation": {
+      "url": "/expertise/financial-transformation",
+      "testName": "expertise_financial_transformation",
+      "auth": false
+    },
+    "jarrard": {
+      "url": "/jarrard",
+      "testName": "jarrard",
+      "auth": false
+    },
+    "expertise_digital_transformation": {
+      "url": "/expertise/digital-transformation",
+      "testName": "expertise_digital_transformation",
+      "auth": false
+    },
+    "expertise_business_technology_innovation": {
+      "url": "/expertise/business-technology-innovation",
+      "testName": "expertise_business_technology_innovation",
+      "auth": false
+    },
+    "campaigns_healthcare_remix_collection": {
+      "url": "/campaigns/healthcare-remix-collection",
+      "testName": "campaigns_healthcare_remix_collection",
+      "auth": false
+    },
+    "about_diversity_equity_and_inclusion_chartis": {
+      "url": "/about/diversity-equity-and-inclusion-chartis",
+      "testName": "about_diversity_equity_and_inclusion_chartis",
+      "auth": false
+    },
+    "expertise_clinical_transformation": {
+      "url": "/expertise/clinical-transformation",
+      "testName": "expertise_clinical_transformation",
+      "auth": false
+    },
+    "client_results": {
+      "url": "/client-results",
+      "testName": "client_results",
+      "auth": false
+    },
+    "expertise_value_optimization_integration": {
+      "url": "/expertise/value-optimization-integration",
+      "testName": "expertise_value_optimization_integration",
+      "auth": false
+    },
+    "expertise_ma_strategy_transaction_advisory": {
+      "url": "/expertise/ma-strategy-transaction-advisory",
+      "testName": "expertise_ma_strategy_transaction_advisory",
+      "auth": false
+    },
+    "expertise_burnout_solutions": {
+      "url": "/expertise/burnout-solutions",
+      "testName": "expertise_burnout_solutions",
+      "auth": false
+    },
+    "expertise_financial_performance_improvement": {
+      "url": "/expertise/financial-performance-improvement",
+      "testName": "expertise_financial_performance_improvement",
+      "auth": false
+    },
+    "expertise_value_based_care": {
+      "url": "/expertise/value-based-care",
+      "testName": "expertise_value_based_care",
+      "auth": false
+    },
+    "health_equity_belonging": {
+      "url": "/health-equity-belonging",
+      "testName": "health_equity_belonging",
+      "auth": false
+    },
+    "expertise_health_equity_belonging": {
+      "url": "/expertise/health-equity-belonging",
+      "testName": "expertise_health_equity_belonging",
+      "auth": false
+    },
+    "expertise_platform_growth_strategy": {
+      "url": "/expertise/platform-growth-strategy",
+      "testName": "expertise_platform_growth_strategy",
+      "auth": false
+    },
+    "expertise_digital_consumer_experience": {
+      "url": "/expertise/digital-consumer-experience",
+      "testName": "expertise_digital_consumer_experience",
+      "auth": false
+    },
+    "insights_query_1": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=51",
+      "testName": "insights_query_1",
+      "auth": false
+    },
+    "insights_query_2": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=48",
+      "testName": "insights_query_2",
+      "auth": false
+    },
+    "insights_query_3": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=123",
+      "testName": "insights_query_3",
+      "auth": false
+    },
+    "insights_query_4": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=61",
+      "testName": "insights_query_4",
+      "auth": false
+    },
+    "insights_query_5": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=113",
+      "testName": "insights_query_5",
+      "auth": false
+    },
+    "insights_query_6": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=60",
+      "testName": "insights_query_6",
+      "auth": false
+    }
+  }

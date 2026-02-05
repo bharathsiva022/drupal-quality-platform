@@ -120,8 +120,7 @@ tests/cypress/screenshots
 tests/cypress/reports
 tests/cypress/downloads
 tests/runner-results/
-tests/playwright/html-reports
-tests/playwright/test-results
+tests/playwright/reports
 tests/cucumber-messages.ndjson
 tests/cypress.env.json
 config
@@ -132,3 +131,4 @@ templates
 src
 recipes
 web
+.env

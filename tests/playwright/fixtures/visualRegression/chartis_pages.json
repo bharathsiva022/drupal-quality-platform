@@ -1,0 +1,17 @@
+{
+    "home": {
+      "url": "/",
+      "testName": "home",
+      "auth": false
+    },
+    "expertise_care_delivery": {
+      "url": "/expertise/care-delivery",
+      "testName": "expertise_care_delivery",
+      "auth": false
+    },
+    "expertise_digital_it_operations": {
+      "url": "/expertise/digital-it-operations",
+      "testName": "expertise_digital_it_operations",
+      "auth": false
+    }
+  }
