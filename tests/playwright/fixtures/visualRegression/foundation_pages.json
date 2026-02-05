@@ -1,0 +1,27 @@
+ {
+    "chartis_foundation_grant_application": {
+      "url": "/chartis-foundation-grant-application",
+      "testName": "chartis_foundation_grant_application",
+      "auth": false
+    },
+    "about_chartis_foundation": {
+      "url": "/about-chartis-foundation",
+      "testName": "about_chartis_foundation",
+      "auth": false
+    },
+    "chartis_foundation_grant_eligibility_questionnaire": {
+      "url": "/chartis-foundation-grant-eligibility-questionnaire",
+      "testName": "chartis_foundation_grant_eligibility_questionnaire",
+      "auth": false
+    },
+    "chartis_foundation_one_time_grant_application": {
+      "url": "/chartis-foundation-one-time-grant-application",
+      "testName": "chartis_foundation_one_time_grant_application",
+      "auth": false
+    },
+    "chartis_foundation_fellows_grant_application": {
+      "url": "/chartis-foundation-fellows-grant-application",
+      "testName": "chartis_foundation_fellows_grant_application",
+      "auth": false
+    }
+  }

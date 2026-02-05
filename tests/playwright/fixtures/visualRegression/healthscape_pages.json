@@ -1,0 +1,797 @@
+ {
+    "home": {
+      "url": "/",
+      "testName": "home",
+      "auth": false
+    },
+    "about_our_people": {
+      "url": "/about/our-people",
+      "testName": "about_our_people",
+      "auth": false
+    },
+    "healthcare_industry_insights": {
+      "url": "/healthcare-industry-insights",
+      "testName": "healthcare_industry_insights",
+      "auth": false
+    },
+    "expertise_accelerate_strategic_growth": {
+      "url": "/expertise/accelerate-strategic-growth",
+      "testName": "expertise_accelerate_strategic_growth",
+      "auth": false
+    },
+    "page_simple_hero": {
+      "url": "/page-simple-hero",
+      "testName": "page_simple_hero",
+      "auth": false
+    },
+    "search": {
+      "url": "/search",
+      "testName": "search",
+      "auth": false
+    },
+    "page_campaign": {
+      "url": "/page-campaign",
+      "testName": "page_campaign",
+      "auth": false
+    },
+    "about_news": {
+      "url": "/about/news",
+      "testName": "about_news",
+      "auth": false
+    },
+    "about_healthscape": {
+      "url": "/about-healthscape",
+      "testName": "about_healthscape",
+      "auth": false
+    },
+    "about_careers": {
+      "url": "/about/careers",
+      "testName": "about_careers",
+      "auth": false
+    },
+    "expertise_enhance_value": {
+      "url": "/expertise/enhance-value",
+      "testName": "expertise_enhance_value",
+      "auth": false
+    },
+    "expertise_optimize_operations_technology": {
+      "url": "/expertise/optimize-operations-technology",
+      "testName": "expertise_optimize_operations_technology",
+      "auth": false
+    },
+    "expertise_activate_decision_intelligence": {
+      "url": "/expertise/activate-decision-intelligence",
+      "testName": "expertise_activate_decision_intelligence",
+      "auth": false
+    },
+    "who_we_serve_health_plans_and_payers": {
+      "url": "/who-we-serve/health-plans-and-payers",
+      "testName": "who_we_serve_health_plans_and_payers",
+      "auth": false
+    },
+    "who_we_serve_ancillary_and_specialty_health_organizations": {
+      "url": "/who-we-serve/ancillary-and-specialty-health-organizations",
+      "testName": "who_we_serve_ancillary_and_specialty_health_organizations",
+      "auth": false
+    },
+    "who_we_serve_healthcare_investors": {
+      "url": "/who-we-serve/healthcare-investors",
+      "testName": "who_we_serve_healthcare_investors",
+      "auth": false
+    },
+    "contact": {
+      "url": "/contact",
+      "testName": "contact",
+      "auth": false
+    },
+    "insights_receive_our_latest_thinking": {
+      "url": "/insights/receive-our-latest-thinking",
+      "testName": "insights_receive_our_latest_thinking",
+      "auth": false
+    },
+    "who_we_serve": {
+      "url": "/who-we-serve",
+      "testName": "who_we_serve",
+      "auth": false
+    },
+    "privacy_policy": {
+      "url": "/privacy-policy",
+      "testName": "privacy_policy",
+      "auth": false
+    },
+    "terms_conditions": {
+      "url": "/terms-conditions",
+      "testName": "terms_conditions",
+      "auth": false
+    },
+    "expertise_communicate_purpose": {
+      "url": "/expertise/communicate-purpose",
+      "testName": "expertise_communicate_purpose",
+      "auth": false
+    },
+    "happy_holidays_healthscape_advisors": {
+      "url": "/happy-holidays-healthscape-advisors",
+      "testName": "happy_holidays_healthscape_advisors",
+      "auth": false
+    },
+    "about_our_people_alexis_levy": {
+      "url": "/about/our-people/alexis-levy",
+      "testName": "about_our_people_alexis_levy",
+      "auth": false
+    },
+    "about_our_people_dan_delaney": {
+      "url": "/about/our-people/dan-delaney",
+      "testName": "about_our_people_dan_delaney",
+      "auth": false
+    },
+    "about_our_people_mike_ferson": {
+      "url": "/about/our-people/mike-ferson",
+      "testName": "about_our_people_mike_ferson",
+      "auth": false
+    },
+    "about_our_people_cary_badger": {
+      "url": "/about/our-people/cary-badger",
+      "testName": "about_our_people_cary_badger",
+      "auth": false
+    },
+    "about_our_people_michelle_werr": {
+      "url": "/about/our-people/michelle-werr",
+      "testName": "about_our_people_michelle_werr",
+      "auth": false
+    },
+    "about_our_people_matt_krizmanich": {
+      "url": "/about/our-people/matt-krizmanich",
+      "testName": "about_our_people_matt_krizmanich",
+      "auth": false
+    },
+    "about_our_people_elissa_glavash": {
+      "url": "/about/our-people/elissa-glavash",
+      "testName": "about_our_people_elissa_glavash",
+      "auth": false
+    },
+    "about_our_people_tej_shah": {
+      "url": "/about/our-people/tej-shah",
+      "testName": "about_our_people_tej_shah",
+      "auth": false
+    },
+    "about_our_people_brian_goetsch": {
+      "url": "/about/our-people/brian-goetsch",
+      "testName": "about_our_people_brian_goetsch",
+      "auth": false
+    },
+    "about_our_people_jeremy_stenger": {
+      "url": "/about/our-people/jeremy-stenger",
+      "testName": "about_our_people_jeremy_stenger",
+      "auth": false
+    },
+    "about_our_people_jacqueline_vitta": {
+      "url": "/about/our-people/jacqueline-vitta",
+      "testName": "about_our_people_jacqueline_vitta",
+      "auth": false
+    },
+    "about_our_people_luke_pisarcik": {
+      "url": "/about/our-people/luke-pisarcik",
+      "testName": "about_our_people_luke_pisarcik",
+      "auth": false
+    },
+    "about_our_people_lee_stuck": {
+      "url": "/about/our-people/lee-stuck",
+      "testName": "about_our_people_lee_stuck",
+      "auth": false
+    },
+    "about_our_people_caitlin_walsdorf": {
+      "url": "/about/our-people/caitlin-walsdorf",
+      "testName": "about_our_people_caitlin_walsdorf",
+      "auth": false
+    },
+    "about_our_people_neil_precilio": {
+      "url": "/about/our-people/neil-precilio",
+      "testName": "about_our_people_neil_precilio",
+      "auth": false
+    },
+    "about_our_people_nate_akers": {
+      "url": "/about/our-people/nate-akers",
+      "testName": "about_our_people_nate_akers",
+      "auth": false
+    },
+    "about_our_people_brian_dineen": {
+      "url": "/about/our-people/brian-dineen",
+      "testName": "about_our_people_brian_dineen",
+      "auth": false
+    },
+    "about_our_people_david_sann": {
+      "url": "/about/our-people/david-sann",
+      "testName": "about_our_people_david_sann",
+      "auth": false
+    },
+    "about_our_people_duane_reynolds": {
+      "url": "/about/our-people/duane-reynolds",
+      "testName": "about_our_people_duane_reynolds",
+      "auth": false
+    },
+    "about_our_people_jackie_allard": {
+      "url": "/about/our-people/jackie-allard",
+      "testName": "about_our_people_jackie_allard",
+      "auth": false
+    },
+    "about_our_people_kristin_kellas": {
+      "url": "/about/our-people/kristin-kellas",
+      "testName": "about_our_people_kristin_kellas",
+      "auth": false
+    },
+    "about_our_people_nick_herro": {
+      "url": "/about/our-people/nick-herro",
+      "testName": "about_our_people_nick_herro",
+      "auth": false
+    },
+    "about_our_people_atul_pathiyal": {
+      "url": "/about/our-people/atul-pathiyal",
+      "testName": "about_our_people_atul_pathiyal",
+      "auth": false
+    },
+    "about_our_people_colin_blaney": {
+      "url": "/about/our-people/colin-blaney",
+      "testName": "about_our_people_colin_blaney",
+      "auth": false
+    },
+    "about_our_people_jeannie_hubbell": {
+      "url": "/about/our-people/jeannie-hubbell",
+      "testName": "about_our_people_jeannie_hubbell",
+      "auth": false
+    },
+    "about_our_people_tiffany_majors": {
+      "url": "/about/our-people/tiffany-majors",
+      "testName": "about_our_people_tiffany_majors",
+      "auth": false
+    },
+    "about_our_people_dave_nelson": {
+      "url": "/about/our-people/dave-nelson",
+      "testName": "about_our_people_dave_nelson",
+      "auth": false
+    },
+    "about_our_people_isabelle_giap": {
+      "url": "/about/our-people/isabelle-giap",
+      "testName": "about_our_people_isabelle_giap",
+      "auth": false
+    },
+    "about_our_people_kirsten_bickford": {
+      "url": "/about/our-people/kirsten-bickford",
+      "testName": "about_our_people_kirsten_bickford",
+      "auth": false
+    },
+    "about_our_people_tiara_jones": {
+      "url": "/about/our-people/tiara-jones",
+      "testName": "about_our_people_tiara_jones",
+      "auth": false
+    },
+    "about_our_people_rachel_zellman": {
+      "url": "/about/our-people/rachel-zellman",
+      "testName": "about_our_people_rachel_zellman",
+      "auth": false
+    },
+    "about_our_people_heather_feng": {
+      "url": "/about/our-people/heather-feng",
+      "testName": "about_our_people_heather_feng",
+      "auth": false
+    },
+    "about_our_people_jade_christie_maples": {
+      "url": "/about/our-people/jade-christie-maples",
+      "testName": "about_our_people_jade_christie_maples",
+      "auth": false
+    },
+    "about_our_people_frank_venus": {
+      "url": "/about/our-people/frank-venus",
+      "testName": "about_our_people_frank_venus",
+      "auth": false
+    },
+    "about_our_people_ahmed_naguib": {
+      "url": "/about/our-people/ahmed-naguib",
+      "testName": "about_our_people_ahmed_naguib",
+      "auth": false
+    },
+    "about_our_people_robert_valdes_curie": {
+      "url": "/about/our-people/robert-valdes-curie",
+      "testName": "about_our_people_robert_valdes_curie",
+      "auth": false
+    },
+    "about_our_people_akshay_jindal": {
+      "url": "/about/our-people/akshay-jindal",
+      "testName": "about_our_people_akshay_jindal",
+      "auth": false
+    },
+    "about_our_people_scott_magit": {
+      "url": "/about/our-people/scott-magit",
+      "testName": "about_our_people_scott_magit",
+      "auth": false
+    },
+    "about_our_people_florian_quarre": {
+      "url": "/about/our-people/florian-quarre",
+      "testName": "about_our_people_florian_quarre",
+      "auth": false
+    },
+    "about_our_people_tiffany_jungers": {
+      "url": "/about/our-people/tiffany-jungers",
+      "testName": "about_our_people_tiffany_jungers",
+      "auth": false
+    },
+    "insights_racial_disparities_in_healthcare_a_call_to_action": {
+      "url": "/insights/racial-disparities-in-healthcare-a-call-to-action",
+      "testName": "insights_racial_disparities_in_healthcare_a_call_to_action",
+      "auth": false
+    },
+    "insights_considerations_for_your_medicare_advantage_medical_surgical_vision_solution": {
+      "url": "/insights/considerations-for-your-medicare-advantage-medical-surgical-vision-solution",
+      "testName": "insights_considerations_for_your_medicare_advantage_medical_surgical_vision_solution",
+      "auth": false
+    },
+    "insights_what_you_need_to_know_about_cms_recent_flurry_of_ma_star_ratings_reports_data_and_notifications": {
+      "url": "/insights/what-you-need-to-know-about-cms-recent-flurry-of-ma-star-ratings-reports-data-and-notifications",
+      "testName": "insights_what_you_need_to_know_about_cms_recent_flurry_of_ma_star_ratings_reports_data_and_notifications",
+      "auth": false
+    },
+    "insights_star_year_2022_second_plan_preview_everything_you_need_to_know": {
+      "url": "/insights/star-year-2022-second-plan-preview-everything-you-need-to-know",
+      "testName": "insights_star_year_2022_second_plan_preview_everything_you_need_to_know",
+      "auth": false
+    },
+    "insights_with_more_online_enrollment_maos_must_add_personal_touch": {
+      "url": "/insights/with-more-online-enrollment-maos-must-add-personal-touch",
+      "testName": "insights_with_more_online_enrollment_maos_must_add_personal_touch",
+      "auth": false
+    },
+    "insights_culture_e_fede": {
+      "url": "/insights/culture-e-fede",
+      "testName": "insights_culture_e_fede",
+      "auth": false
+    },
+    "insights_will_new_release_of_4_star_plans_hasten_the_depletion_of_the_medicare_hospital_insurance_trust_fund_key_takeaways_implications_for_plans_coming_out_of_recently_published_2022_star_ratings": {
+      "url": "/insights/will-new-release-of-4-star-plans-hasten-the-depletion-of-the-medicare-hospital-insurance-trust-fund-key-takeaways-implications-for-plans-coming-out-of-recently-published-2022-star-ratings",
+      "testName": "insights_will_new_release_of_4_star_plans_hasten_the_depletion_of_the_medicare_hospital_insurance_trust_fund_key_takeaways_implications_for_plans_coming_out_of_recently_published_2022_star_ratings",
+      "auth": false
+    },
+    "insights_beneath_high_ratings_ma_pd_stars_scores_show_shortcomings": {
+      "url": "/insights/beneath-high-ratings-ma-pd-stars-scores-show-shortcomings",
+      "testName": "insights_beneath_high_ratings_ma_pd_stars_scores_show_shortcomings",
+      "auth": false
+    },
+    "insights_value_transformation_in_specialty_care": {
+      "url": "/insights/value-transformation-in-specialty-care",
+      "testName": "insights_value_transformation_in_specialty_care",
+      "auth": false
+    },
+    "insights_otc_a_missed_opportunity_for_member_engagement": {
+      "url": "/insights/otc-a-missed-opportunity-for-member-engagement",
+      "testName": "insights_otc_a_missed_opportunity_for_member_engagement",
+      "auth": false
+    },
+    "insights_data_to_the_people_by_the_people_for_the_people": {
+      "url": "/insights/data-to-the-people-by-the-people-for-the-people",
+      "testName": "insights_data_to_the_people_by_the_people_for_the_people",
+      "auth": false
+    },
+    "insights_rewards_and_incentives_rule": {
+      "url": "/insights/rewards-and-incentives-rule",
+      "testName": "insights_rewards_and_incentives_rule",
+      "auth": false
+    },
+    "insights_health_plan_success_drivers_in_2022_a_renewed_focus_on_performance_and_execution": {
+      "url": "/insights/health-plan-success-drivers-in-2022-a-renewed-focus-on-performance-and-execution",
+      "testName": "insights_health_plan_success_drivers_in_2022_a_renewed_focus_on_performance_and_execution",
+      "auth": false
+    },
+    "insights_2022_outlook_maos_face_payment_related_unknowns": {
+      "url": "/insights/2022-outlook-maos-face-payment-related-unknowns",
+      "testName": "insights_2022_outlook_maos_face_payment_related_unknowns",
+      "auth": false
+    },
+    "insights_2022_outlook_plethora_of_granular_changes_will_drive_maos_stars_strategy": {
+      "url": "/insights/2022-outlook-plethora-of-granular-changes-will-drive-maos-stars-strategy",
+      "testName": "insights_2022_outlook_plethora_of_granular_changes_will_drive_maos_stars_strategy",
+      "auth": false
+    },
+    "insights_healthscape_advisors_preliminary_insights_on_2022_aep": {
+      "url": "/insights/healthscape-advisors-preliminary-insights-on-2022-aep",
+      "testName": "insights_healthscape_advisors_preliminary_insights_on_2022_aep",
+      "auth": false
+    },
+    "insights_aco_reach_model_implications_for_providers_and_plans": {
+      "url": "/insights/aco-reach-model-implications-for-providers-and-plans",
+      "testName": "insights_aco_reach_model_implications_for_providers_and_plans",
+      "auth": false
+    },
+    "insights_healthscape_advisors_preliminary_insights_on_2022_aep_march_update": {
+      "url": "/insights/healthscape-advisors-preliminary-insights-on-2022-aep-march-update",
+      "testName": "insights_healthscape_advisors_preliminary_insights_on_2022_aep_march_update",
+      "auth": false
+    },
+    "insights_2022_medicare_advantage_dental_benefits_in_review": {
+      "url": "/insights/2022-medicare-advantage-dental-benefits-in-review",
+      "testName": "insights_2022_medicare_advantage_dental_benefits_in_review",
+      "auth": false
+    },
+    "insights_aco_reach_model_program_updates_strategy": {
+      "url": "/insights/aco-reach-model-program-updates-strategy",
+      "testName": "insights_aco_reach_model_program_updates_strategy",
+      "auth": false
+    },
+    "insights_integrated_provider_partnerships": {
+      "url": "/insights/integrated-provider-partnerships",
+      "testName": "insights_integrated_provider_partnerships",
+      "auth": false
+    },
+    "insights_primary_vs_chronic_care": {
+      "url": "/insights/primary-vs-chronic-care",
+      "testName": "insights_primary_vs_chronic_care",
+      "auth": false
+    },
+    "insights_how_health_plans_should_navigate_ma_supplemental_benefits": {
+      "url": "/insights/how-health-plans-should-navigate-ma-supplemental-benefits",
+      "testName": "insights_how_health_plans_should_navigate_ma_supplemental_benefits",
+      "auth": false
+    },
+    "insights_ma_dental_benefit_compare_tool_2023_insights": {
+      "url": "/insights/ma-dental-benefit-compare-tool-2023-insights",
+      "testName": "insights_ma_dental_benefit_compare_tool_2023_insights",
+      "auth": false
+    },
+    "insights_2023_health_plan_outlook_market_trends": {
+      "url": "/insights/2023-health-plan-outlook-market-trends",
+      "testName": "insights_2023_health_plan_outlook_market_trends",
+      "auth": false
+    },
+    "insights_supplemental_benefit_trends_2023": {
+      "url": "/insights/supplemental-benefit-trends-2023",
+      "testName": "insights_supplemental_benefit_trends_2023",
+      "auth": false
+    },
+    "insights_healthscape_advisors_insights_2023_aep_performance": {
+      "url": "/insights/healthscape-advisors-insights-2023-aep-performance",
+      "testName": "insights_healthscape_advisors_insights_2023_aep_performance",
+      "auth": false
+    },
+    "insights_specialty_care_emphasis_in_value_based_care_strategies": {
+      "url": "/insights/specialty-care-emphasis-in-value-based-care-strategies",
+      "testName": "insights_specialty_care_emphasis_in_value_based_care_strategies",
+      "auth": false
+    },
+    "insights_leading_market_trends_and_challenges_from_the_mltss_leadership_summit": {
+      "url": "/insights/leading-market-trends-and-challenges-from-the-mltss-leadership-summit",
+      "testName": "insights_leading_market_trends_and_challenges_from_the_mltss_leadership_summit",
+      "auth": false
+    },
+    "insights_the_aca_market_a_decade_in_with_a_promising_future_for_the_adaptable_health_plan": {
+      "url": "/insights/the-aca-market-a-decade-in-with-a-promising-future-for-the-adaptable-health-plan",
+      "testName": "insights_the_aca_market_a_decade_in_with_a_promising_future_for_the_adaptable_health_plan",
+      "auth": false
+    },
+    "insights_2024_aep_competitive_marketing_season": {
+      "url": "/insights/2024-aep-competitive-marketing-season",
+      "testName": "insights_2024_aep_competitive_marketing_season",
+      "auth": false
+    },
+    "insights_2024_star_rating_analysis_beyond_the_outliers": {
+      "url": "/insights/2024-star-rating-analysis-beyond-the-outliers",
+      "testName": "insights_2024_star_rating_analysis_beyond_the_outliers",
+      "auth": false
+    },
+    "insights_provider_sponsored_ma_plans_evolve_as_2024_collabs_take_more_thoughtful_tack": {
+      "url": "/insights/provider-sponsored-ma-plans-evolve-as-2024-collabs-take-more-thoughtful-tack",
+      "testName": "insights_provider_sponsored_ma_plans_evolve_as_2024_collabs_take_more_thoughtful_tack",
+      "auth": false
+    },
+    "insights_ma_dental_benefit_compare_tool_2024_insights": {
+      "url": "/insights/ma-dental-benefit-compare-tool-2024-insights",
+      "testName": "insights_ma_dental_benefit_compare_tool_2024_insights",
+      "auth": false
+    },
+    "insights_contract_year_2025_policy_and_technical_changes_to_medicare_advantage": {
+      "url": "/insights/contract-year-2025-policy-and-technical-changes-to-medicare-advantage",
+      "testName": "insights_contract_year_2025_policy_and_technical_changes_to_medicare_advantage",
+      "auth": false
+    },
+    "insights_four_pressures_shaping_health_plans_2024": {
+      "url": "/insights/four-pressures-shaping-health-plans-2024",
+      "testName": "insights_four_pressures_shaping_health_plans_2024",
+      "auth": false
+    },
+    "insights_supplemental_benefit_trends_2024": {
+      "url": "/insights/supplemental-benefit-trends-2024",
+      "testName": "insights_supplemental_benefit_trends_2024",
+      "auth": false
+    },
+    "insights_2025_advance_payment_notice_shifts_plans_growth_to_performance": {
+      "url": "/insights/2025-advance-payment-notice-shifts-plans-growth-to-performance",
+      "testName": "insights_2025_advance_payment_notice_shifts_plans_growth_to_performance",
+      "auth": false
+    },
+    "insights_cms_final_rate_announcement_april_2024": {
+      "url": "/insights/cms-final-rate-announcement-april-2024",
+      "testName": "insights_cms_final_rate_announcement_april_2024",
+      "auth": false
+    },
+    "insights_cms_revamps_ma_agent_and_broker_compensation_implications_from_the_final_rule": {
+      "url": "/insights/cms-revamps-ma-agent-and-broker-compensation-implications-from-the-final-rule",
+      "testName": "insights_cms_revamps_ma_agent_and_broker_compensation_implications_from_the_final_rule",
+      "auth": false
+    },
+    "insights_cms_driving_towards_greater_integration_medicare_medicaid": {
+      "url": "/insights/cms-driving-towards-greater-integration-medicare-medicaid",
+      "testName": "insights_cms_driving_towards_greater_integration_medicare_medicaid",
+      "auth": false
+    },
+    "insights_evaluating_performance_of_payer_program_offerings_using_a_data_science_driven_approach": {
+      "url": "/insights/evaluating-performance-of-payer-program-offerings-using-a-data-science-driven-approach",
+      "testName": "insights_evaluating_performance_of_payer_program_offerings_using_a_data_science_driven_approach",
+      "auth": false
+    },
+    "insights_seeing_the_bigger_picture_how_payers_and_providers_can_find_common_ground_in_medicare_advantage": {
+      "url": "/insights/seeing-the-bigger-picture-how-payers-and-providers-can-find-common-ground-in-medicare-advantage",
+      "testName": "insights_seeing_the_bigger_picture_how_payers_and_providers_can_find_common_ground_in_medicare_advantage",
+      "auth": false
+    },
+    "insights_cms_sets_new_standards_for_ssbci_and_supplemental_benefits_across_medicare_advantage_plans": {
+      "url": "/insights/cms-sets-new-standards-for-ssbci-and-supplemental-benefits-across-medicare-advantage-plans",
+      "testName": "insights_cms_sets_new_standards_for_ssbci_and_supplemental_benefits_across_medicare_advantage_plans",
+      "auth": false
+    },
+    "insights_making_health_equity_a_sustainable_business_priority_for_health_plans": {
+      "url": "/insights/making-health-equity-a-sustainable-business-priority-for-health-plans",
+      "testName": "insights_making_health_equity_a_sustainable_business_priority_for_health_plans",
+      "auth": false
+    },
+    "insights_pathway_to_value_perspective_on_how_to_chart_a_path_that_meaningfully_accelerates_the_shift_to_value_based_dental_care": {
+      "url": "/insights/pathway-to-value-perspective-on-how-to-chart-a-path-that-meaningfully-accelerates-the-shift-to-value-based-dental-care",
+      "testName": "insights_pathway_to_value_perspective_on_how_to_chart_a_path_that_meaningfully_accelerates_the_shift_to_value_based_dental_care",
+      "auth": false
+    },
+    "insights_early_analysis_how_health_plans_fared_in_the_2025_medicare_advantage_star_ratings": {
+      "url": "/insights/early-analysis-how-health-plans-fared-in-the-2025-medicare-advantage-star-ratings",
+      "testName": "insights_early_analysis_how_health_plans_fared_in_the_2025_medicare_advantage_star_ratings",
+      "auth": false
+    },
+    "insights_2025_strategic_outlook_five_key_areas_to_drive_health_plan_success": {
+      "url": "/insights/2025-strategic-outlook-five-key-areas-to-drive-health-plan-success",
+      "testName": "insights_2025_strategic_outlook_five_key_areas_to_drive_health_plan_success",
+      "auth": false
+    },
+    "insights_commodity_strategic_asset_how_regional_blues_plan_strategically_positioned_its_provider_data_to_support_enterprise_initiatives": {
+      "url": "/insights/commodity-strategic-asset-how-regional-blues-plan-strategically-positioned-its-provider-data-to-support-enterprise-initiatives",
+      "testName": "insights_commodity_strategic_asset_how_regional_blues_plan_strategically_positioned_its_provider_data_to_support_enterprise_initiatives",
+      "auth": false
+    },
+    "insights_change_management_drives_success_health_plan_sets_its_pdm_implementation_optimal_benefits": {
+      "url": "/insights/change-management-drives-success-health-plan-sets-its-pdm-implementation-optimal-benefits",
+      "testName": "insights_change_management_drives_success_health_plan_sets_its_pdm_implementation_optimal_benefits",
+      "auth": false
+    },
+    "insights_manual_next_gen_how_health_plan_transforming_onboarding_experience_providers": {
+      "url": "/insights/manual-next-gen-how-health-plan-transforming-onboarding-experience-providers",
+      "testName": "insights_manual_next_gen_how_health_plan_transforming_onboarding_experience_providers",
+      "auth": false
+    },
+    "insights_power_strategic_planning_health_plan_ensures_optimal_roi_provider_network_platform_transformation": {
+      "url": "/insights/power-strategic-planning-health-plan-ensures-optimal-roi-provider-network-platform-transformation",
+      "testName": "insights_power_strategic_planning_health_plan_ensures_optimal_roi_provider_network_platform_transformation",
+      "auth": false
+    },
+    "insights_driving_system_wide_growth_how_chartis_helped_provider_sponsored_health_plan_realize_its_full_potential": {
+      "url": "/insights/driving-system-wide-growth-how-chartis-helped-provider-sponsored-health-plan-realize-its-full-potential",
+      "testName": "insights_driving_system_wide_growth_how_chartis_helped_provider_sponsored_health_plan_realize_its_full_potential",
+      "auth": false
+    },
+    "insights_prioritizing_alignment_how_health_plan_developed_enterprise_provider_data_strategy": {
+      "url": "/insights/prioritizing-alignment-how-health-plan-developed-enterprise-provider-data-strategy",
+      "testName": "insights_prioritizing_alignment_how_health_plan_developed_enterprise_provider_data_strategy",
+      "auth": false
+    },
+    "insights_focusing_optimization_how_payer_advanced_its_provider_network_management_capabilities": {
+      "url": "/insights/focusing-optimization-how-payer-advanced-its-provider-network-management-capabilities",
+      "testName": "insights_focusing_optimization_how_payer_advanced_its_provider_network_management_capabilities",
+      "auth": false
+    },
+    "insights_focusing_strategic_growth_how_large_provider_sponsored_health_plan_growing_membership_and_improving_health_outcomes": {
+      "url": "/insights/focusing-strategic-growth-how-large-provider-sponsored-health-plan-growing-membership-and-improving-health-outcomes",
+      "testName": "insights_focusing_strategic_growth_how_large_provider_sponsored_health_plan_growing_membership_and_improving_health_outcomes",
+      "auth": false
+    },
+    "insights_advancing_next_level_performance_provider_network_management_strategic_insights_health_from_health_plan_leaders": {
+      "url": "/insights/advancing-next-level-performance-provider-network-management-strategic-insights-health-from-health-plan-leaders",
+      "testName": "insights_advancing_next_level_performance_provider_network_management_strategic_insights_health_from_health_plan_leaders",
+      "auth": false
+    },
+    "insights_medicaid_redetermination_set_resume_after_hiatus_more_2_years_how_avoid_chaos": {
+      "url": "/insights/medicaid-redetermination-set-resume-after-hiatus-more-2-years-how-avoid-chaos",
+      "testName": "insights_medicaid_redetermination_set_resume_after_hiatus_more_2_years_how_avoid_chaos",
+      "auth": false
+    },
+    "insights_sdoh_strategy_how_healthscape_helped_medicaid_mco_address_homelessness": {
+      "url": "/insights/sdoh-strategy-how-healthscape-helped-medicaid-mco-address-homelessness",
+      "testName": "insights_sdoh_strategy_how_healthscape_helped_medicaid_mco_address_homelessness",
+      "auth": false
+    },
+    "insights_focusing_growth_how_regional_payer_expanded_its_duals_market_footprint": {
+      "url": "/insights/focusing-growth-how-regional-payer-expanded-its-duals-market-footprint",
+      "testName": "insights_focusing_growth_how_regional_payer_expanded_its_duals_market_footprint",
+      "auth": false
+    },
+    "insights_where_costs_meet_outcomes_how_healthscape_helped_medicaid_mco_optimize_hospital_readmissions": {
+      "url": "/insights/where-costs-meet-outcomes-how-healthscape-helped-medicaid-mco-optimize-hospital-readmissions",
+      "testName": "insights_where_costs_meet_outcomes_how_healthscape_helped_medicaid_mco_optimize_hospital_readmissions",
+      "auth": false
+    },
+    "insights_finding_harmony_how_provider_sponsored_health_plan_advanced_payment_integrity": {
+      "url": "/insights/finding-harmony-how-provider-sponsored-health-plan-advanced-payment-integrity",
+      "testName": "insights_finding_harmony_how_provider_sponsored_health_plan_advanced_payment_integrity",
+      "auth": false
+    },
+    "insights_4_steps_address_data_accuracy_challenges_health_plans": {
+      "url": "/insights/4-steps-address-data-accuracy-challenges-health-plans",
+      "testName": "insights_4_steps_address_data_accuracy_challenges_health_plans",
+      "auth": false
+    },
+    "insights_realizing_full_potential_how_community_health_plans_can_stand_out_competitive_market": {
+      "url": "/insights/realizing-full-potential-how-community-health-plans-can-stand-out-competitive-market",
+      "testName": "insights_realizing_full_potential_how_community_health_plans_can_stand_out_competitive_market",
+      "auth": false
+    },
+    "insights_unlocking_value_provider_sponsored_health_plans_new_market_opportunities_offer_leverage": {
+      "url": "/insights/unlocking-value-provider-sponsored-health-plans-new-market-opportunities-offer-leverage",
+      "testName": "insights_unlocking_value_provider_sponsored_health_plans_new_market_opportunities_offer_leverage",
+      "auth": false
+    },
+    "insights_outsider_mainstay_mco_breaks_medicaid_market_dominated_incumbents": {
+      "url": "/insights/outsider-mainstay-mco-breaks-medicaid-market-dominated-incumbents",
+      "testName": "insights_outsider_mainstay_mco_breaks_medicaid_market_dominated_incumbents",
+      "auth": false
+    },
+    "insights_better_everyone_health_plan_increases_affordability_identifying_and_eliminating_waste": {
+      "url": "/insights/better-everyone-health-plan-increases-affordability-identifying-and-eliminating-waste",
+      "testName": "insights_better_everyone_health_plan_increases_affordability_identifying_and_eliminating_waste",
+      "auth": false
+    },
+    "insights_proving_value_health_plan_spotlights_employer_cost_savings_medical_pharmacy_benefit": {
+      "url": "/insights/proving-value-health-plan-spotlights-employer-cost-savings-medical-pharmacy-benefit",
+      "testName": "insights_proving_value_health_plan_spotlights_employer_cost_savings_medical_pharmacy_benefit",
+      "auth": false
+    },
+    "insights_2025_medicare_advantage_dental_benefit_analysis": {
+      "url": "/insights/2025-medicare-advantage-dental-benefit-analysis",
+      "testName": "insights_2025_medicare_advantage_dental_benefit_analysis",
+      "auth": false
+    },
+    "insights_medicaid_managed_care_trends_what_payers_should_know_about_state_priorities_and": {
+      "url": "/insights/medicaid-managed-care-trends-what-payers-should-know-about-state-priorities-and",
+      "testName": "insights_medicaid_managed_care_trends_what_payers_should_know_about_state_priorities_and",
+      "auth": false
+    },
+    "insights_medicare_advantage_health_plan_outlook_for_2026": {
+      "url": "/insights/medicare-advantage-health-plan-outlook-for-2026",
+      "testName": "insights_medicare_advantage_health_plan_outlook_for_2026",
+      "auth": false
+    },
+    "insights_medicaid_managed_care_trends_what_health_plans_should_know_about_potential_impacts_of_policy_from_the_new_trump_administration": {
+      "url": "/insights/medicaid-managed-care-trends-what-health-plans-should-know-about-potential-impacts-of-policy-from-the-new-trump-administration",
+      "testName": "insights_medicaid_managed_care_trends_what_health_plans_should_know_about_potential_impacts_of_policy_from_the_new_trump_administration",
+      "auth": false
+    },
+    "insights_medicare_advantage_market_growth_slows_amid_intensified_headwinds": {
+      "url": "/insights/medicare-advantage-market-growth-slows-amid-intensified-headwinds",
+      "testName": "insights_medicare_advantage_market_growth_slows_amid_intensified_headwinds",
+      "auth": false
+    },
+    "insights_hidden_driver_peak_performance_how_operational_excellence_enables_provider_network": {
+      "url": "/insights/hidden-driver-peak-performance-how-operational-excellence-enables-provider-network",
+      "testName": "insights_hidden_driver_peak_performance_how_operational_excellence_enables_provider_network",
+      "auth": false
+    },
+    "insights_no_suprises_act_data_through_q4_2024_highlights_need_payers_rethink_their_strategy": {
+      "url": "/insights/no-suprises-act-data-through-q4-2024-highlights-need-payers-rethink-their-strategy",
+      "testName": "insights_no_suprises_act_data_through_q4_2024_highlights_need_payers_rethink_their_strategy",
+      "auth": false
+    },
+    "insights_test_tableau_content": {
+      "url": "/insights/test-tableau-content",
+      "testName": "insights_test_tableau_content",
+      "auth": false
+    },
+    "insights_outpacing_washington_how_state_medicaid_policies_are_moving_faster_and_how_mcos_should": {
+      "url": "/insights/outpacing-washington-how-state-medicaid-policies-are-moving-faster-and-how-mcos-should",
+      "testName": "insights_outpacing_washington_how_state_medicaid_policies_are_moving_faster_and_how_mcos_should",
+      "auth": false
+    },
+    "insights_succeed_value_based_care_pl_strategy_drives_sustainable_results": {
+      "url": "/insights/succeed-value-based-care-pl-strategy-drives-sustainable-results",
+      "testName": "insights_succeed_value_based_care_pl_strategy_drives_sustainable_results",
+      "auth": false
+    },
+    "insights_preserving_trust_nonprofit_health_plan_exits_ma_market_clear_thoughtful_communications": {
+      "url": "/insights/preserving-trust-nonprofit-health-plan-exits-ma-market-clear-thoughtful-communications",
+      "testName": "insights_preserving_trust_nonprofit_health_plan_exits_ma_market_clear_thoughtful_communications",
+      "auth": false
+    },
+    "insights_confident_direction_regional_payer_leverages_research_decision_making_potential": {
+      "url": "/insights/confident-direction-regional-payer-leverages-research-decision-making-potential",
+      "testName": "insights_confident_direction_regional_payer_leverages_research_decision_making_potential",
+      "auth": false
+    },
+    "insights_creating_alignment_healthcare_organization_connects_change_vision_future": {
+      "url": "/insights/creating-alignment-healthcare-organization-connects-change-vision-future",
+      "testName": "insights_creating_alignment_healthcare_organization_connects_change_vision_future",
+      "auth": false
+    },
+    "insights_reconnecting_strategy_healthcare_organization_creates_owners_mindset_across_workforce": {
+      "url": "/insights/reconnecting-strategy-healthcare-organization-creates-owners-mindset-across-workforce",
+      "testName": "insights_reconnecting_strategy_healthcare_organization_creates_owners_mindset_across_workforce",
+      "auth": false
+    },
+    "insights_next_level_payer_provider_collaboration_can_help_mitigate_impact_medicaid_cuts": {
+      "url": "/insights/next-level-payer-provider-collaboration-can-help-mitigate-impact-medicaid-cuts",
+      "testName": "insights_next_level_payer_provider_collaboration_can_help_mitigate_impact_medicaid_cuts",
+      "auth": false
+    },
+    "insights_unsustainable_regional_not_profit_health_plans_face_tough_choices_over_next_2_years": {
+      "url": "/insights/unsustainable-regional-not-profit-health-plans-face-tough-choices-over-next-2-years",
+      "testName": "insights_unsustainable_regional_not_profit_health_plans_face_tough_choices_over_next_2_years",
+      "auth": false
+    },
+    "insights_early_look_2026_medicare_advantage_stars_ratings_stabilize_without_meaningful_improvement": {
+      "url": "/insights/early-look-2026-medicare-advantage-stars-ratings-stabilize-without-meaningful-improvement",
+      "testName": "insights_early_look_2026_medicare_advantage_stars_ratings_stabilize_without_meaningful_improvement",
+      "auth": false
+    },
+    "insights_2026_medicare_advantage_supplemental_benefit_landscape_analysis": {
+      "url": "/insights/2026-medicare-advantage-supplemental-benefit-landscape-analysis",
+      "testName": "insights_2026_medicare_advantage_supplemental_benefit_landscape_analysis",
+      "auth": false
+    },
+    "insights_shared_vision_independent_health_mvp_health_care_partner_advance_member_health": {
+      "url": "/insights/shared-vision-independent-health-mvp-health-care-partner-advance-member-health",
+      "testName": "insights_shared_vision_independent_health_mvp_health_care_partner_advance_member_health",
+      "auth": false
+    },
+    "insights_future_health_plans_three_focus_areas_transform_untenable_position_sustainable_impact_2030": {
+      "url": "/insights/future-health-plans-three-focus-areas-transform-untenable-position-sustainable-impact-2030",
+      "testName": "insights_future_health_plans_three_focus_areas_transform_untenable_position_sustainable_impact_2030",
+      "auth": false
+    },
+    "insights_medicaid_procurement_outlook_trends_delays_and_whats_next": {
+      "url": "/insights/medicaid-procurement-outlook-trends-delays-and-whats-next",
+      "testName": "insights_medicaid_procurement_outlook_trends_delays_and_whats_next",
+      "auth": false
+    },
+    "about_news_healthscape_advisors_named_one_of_chicagos_best_and_brightest_companies_to_work_for": {
+      "url": "/about/news/healthscape-advisors-named-one-of-chicagos-best-and-brightest-companies-to-work-for",
+      "testName": "about_news_healthscape_advisors_named_one_of_chicagos_best_and_brightest_companies_to_work_for",
+      "auth": false
+    },
+    "about_news_healthscape_advisors_named_chicagos_best_and_brightest_companies_to_work_for_seventh_year_in_a_row": {
+      "url": "/about/news/healthscape-advisors-named-chicagos-best-and-brightest-companies-to-work-for-seventh-year-in-a-row",
+      "testName": "about_news_healthscape_advisors_named_chicagos_best_and_brightest_companies_to_work_for_seventh_year_in_a_row",
+      "auth": false
+    },
+    "about_news_healthscape_named_national_best_and_brightest_companies_to_work_for": {
+      "url": "/about/news/healthscape-named-national-best-and-brightest-companies-to-work-for",
+      "testName": "about_news_healthscape_named_national_best_and_brightest_companies_to_work_for",
+      "auth": false
+    },
+    "about_news_leading_healthcare_payer_consulting_firm_joins_chartis": {
+      "url": "/about/news/leading-healthcare-payer-consulting-firm-joins-chartis",
+      "testName": "about_news_leading_healthcare_payer_consulting_firm_joins_chartis",
+      "auth": false
+    },
+    "about_news_tej_shah_and_dan_delaney_to_co_lead_healthscape_advisors": {
+      "url": "/about/news/tej-shah-and-dan-delaney-to-co-lead-healthscape-advisors",
+      "testName": "about_news_tej_shah_and_dan_delaney_to_co_lead_healthscape_advisors",
+      "auth": false
+    },
+    "about_news_survey_reveals_dental_industry_is_at_inflection_point_for_value_based_care": {
+      "url": "/about/news/survey-reveals-dental-industry-is-at-inflection-point-for-value-based-care",
+      "testName": "about_news_survey_reveals_dental_industry_is_at_inflection_point_for_value_based_care",
+      "auth": false
+    },
+    "about_news_akshay_jindal_joins_healthscape_advisors_senior_partner": {
+      "url": "/about/news/akshay-jindal-joins-healthscape-advisors-senior-partner",
+      "testName": "about_news_akshay_jindal_joins_healthscape_advisors_senior_partner",
+      "auth": false
+    }
+  }

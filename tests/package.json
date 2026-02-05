@@ -20,7 +20,11 @@
     "run:dev:vs:uat": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=uat CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_existing'",
     "run:pr:branch:vs:uat/dev/live": "cross-env PERCY_TARGET_BRANCH=<uat/dev/live_site> CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=<Your local accessable file>,TAGS='@visual_existing'",
     "run:dev:vs:figma": "cross-env PERCY_BRANCH=dev_vs_figma PERCY_TARGET_BRANCH=figma_design CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_redesign'",
-    "run:test:headless": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --browser chrome --env configFile=dev,TAGS='@drupal_checks'"
+    "run:test:headless": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --browser chrome --env configFile=dev,TAGS='@drupal_checks'",
+
+    "pw:test:dev:visual": "cross-env TEST_ENV=dev npx playwright test --project=chromium --headed playwright/tests/visualTests/chartis_visual_tests.spec.js",
+    "pw:test:visual": "cross-env TEST_ENV=dev npx percy exec -- npx playwright test --project=chromium --headed playwright/tests/visualTests/chartis_visual_tests.spec.js"
+
   },
   "repository": {
     "type": "git",
@@ -56,11 +60,12 @@
     "@modelcontextprotocol/sdk": "^1.25.2",
     "@percy/cli": "^1.31.2",
     "@percy/cypress": "^3.1.6",
+    "@percy/playwright": "^1.0.10",
     "@playwright/test": "^1.57.0",
     "axe-core": "^4.11.0",
     "cypress-axe": "^1.7.0",
-    "zod": "^4.3.5",
+    "js-yaml": "^4.1.0",
     "mochawesome": "^7.1.4",
-    "js-yaml": "^4.1.0"
+    "zod": "^4.3.5"
   }
 }

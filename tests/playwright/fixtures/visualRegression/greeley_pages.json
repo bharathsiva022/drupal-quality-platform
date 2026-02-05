@@ -1,0 +1,192 @@
+ {
+    "home": {
+      "url": "/",
+      "testName": "home",
+      "auth": false
+    },
+    "privacy_policy": {
+      "url": "/privacy-policy",
+      "testName": "privacy_policy",
+      "auth": false
+    },
+    "campaigns_2026_physician_hospital_leadership_seminar_scottsdale_az": {
+      "url": "/campaigns/2026-physician-hospital-leadership-seminar-scottsdale-az",
+      "testName": "campaigns_2026_physician_hospital_leadership_seminar_scottsdale_az",
+      "auth": false
+    },
+    "greeley_interim_staffing_interim_staffing_solutions": {
+      "url": "/greeley-interim-staffing/interim-staffing-solutions",
+      "testName": "greeley_interim_staffing_interim_staffing_solutions",
+      "auth": false
+    },
+    "about_news": {
+      "url": "/about/news",
+      "testName": "about_news",
+      "auth": false
+    },
+    "insights_how_cultivate_effective_medical_staff_services_enhance_patient_safety": {
+      "url": "/insights/how-cultivate-effective-medical-staff-services-enhance-patient-safety",
+      "testName": "insights_how_cultivate_effective_medical_staff_services_enhance_patient_safety",
+      "auth": false
+    },
+    "membership_program": {
+      "url": "/membership-program",
+      "testName": "membership_program",
+      "auth": false
+    },
+    "insights": {
+      "url": "/insights",
+      "testName": "insights",
+      "auth": false
+    },
+    "careers": {
+      "url": "/careers",
+      "testName": "careers",
+      "auth": false
+    },
+    "about_our_team": {
+      "url": "/about/our-team",
+      "testName": "about_our_team",
+      "auth": false
+    },
+    "about_contact_our_team": {
+      "url": "/about/contact-our-team",
+      "testName": "about_contact_our_team",
+      "auth": false
+    },
+    "education_solutions": {
+      "url": "/education-solutions",
+      "testName": "education_solutions",
+      "auth": false
+    },
+    "chartis_workforce_solutions": {
+      "url": "/chartis-workforce-solutions",
+      "testName": "chartis_workforce_solutions",
+      "auth": false
+    },
+    "custom_education": {
+      "url": "/custom-education",
+      "testName": "custom_education",
+      "auth": false
+    },
+    "upcoming_physician_hospital_leadership_seminars": {
+      "url": "/upcoming-physician-hospital-leadership-seminars",
+      "testName": "upcoming_physician_hospital_leadership_seminars",
+      "auth": false
+    },
+    "medical_staff_services_optimization_provider_enrollment": {
+      "url": "/medical-staff-services-optimization/provider-enrollment",
+      "testName": "medical_staff_services_optimization_provider_enrollment",
+      "auth": false
+    },
+    "jumpstart_your_career": {
+      "url": "/jumpstart-your-career",
+      "testName": "jumpstart_your_career",
+      "auth": false
+    },
+    "subscribe": {
+      "url": "/subscribe",
+      "testName": "subscribe",
+      "auth": false
+    },
+    "greeley_interim_staffing": {
+      "url": "/greeley-interim-staffing",
+      "testName": "greeley_interim_staffing",
+      "auth": false
+    },
+    "campaigns_physician_hospital_leadership_seminar_virtual_2026": {
+      "url": "/campaigns/physician-hospital-leadership-seminar-virtual-2026",
+      "testName": "campaigns_physician_hospital_leadership_seminar_virtual_2026",
+      "auth": false
+    },
+    "campaigns_interim_staffing_solutions": {
+      "url": "/campaigns/interim-staffing-solutions",
+      "testName": "campaigns_interim_staffing_solutions",
+      "auth": false
+    },
+    "medical_staff_services_optimization_medical_staff_services_credentialing_and_provider_enrollment": {
+      "url": "/medical-staff-services-optimization/medical-staff-services-credentialing-and-provider-enrollment",
+      "testName": "medical_staff_services_optimization_medical_staff_services_credentialing_and_provider_enrollment",
+      "auth": false
+    },
+    "medical_staff_services_optimization_physician_credentialing_privileging_services": {
+      "url": "/medical-staff-services-optimization/physician-credentialing-privileging-services",
+      "testName": "medical_staff_services_optimization_physician_credentialing_privileging_services",
+      "auth": false
+    },
+    "medical_staff_services_optimization": {
+      "url": "/medical-staff-services-optimization",
+      "testName": "medical_staff_services_optimization",
+      "auth": false
+    },
+    "campaigns_physician_hospital_leadership_seminar_san_diego_ca": {
+      "url": "/campaigns/physician-hospital-leadership-seminar-san-diego-ca",
+      "testName": "campaigns_physician_hospital_leadership_seminar_san_diego_ca",
+      "auth": false
+    },
+    "about": {
+      "url": "/about",
+      "testName": "about",
+      "auth": false
+    },
+    "insights_query_1": {
+      "url": "/insights?_page=1&keywords=&_limit=10&type=116",
+      "testName": "insights_query_1",
+      "auth": false
+    },
+    "insights_query_2": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=29",
+      "testName": "insights_query_2",
+      "auth": false
+    },
+    "insights_query_3": {
+      "url": "/insights?_page=1&keywords=&_limit=10&type=4",
+      "testName": "insights_query_3",
+      "auth": false
+    },
+    "insights_query_4": {
+      "url": "/insights?_page=1&keywords=&_limit=10&type=1",
+      "testName": "insights_query_4",
+      "auth": false
+    },
+    "insights_query_5": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=33",
+      "testName": "insights_query_5",
+      "auth": false
+    },
+    "insights_query_6": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=28",
+      "testName": "insights_query_6",
+      "auth": false
+    },
+    "insights_query_7": {
+      "url": "/insights?_page=1&keywords=&_limit=10&type=2",
+      "testName": "insights_query_7",
+      "auth": false
+    },
+    "insights_query_8": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=30",
+      "testName": "insights_query_8",
+      "auth": false
+    },
+    "insights_query_9": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=31",
+      "testName": "insights_query_9",
+      "auth": false
+    },
+    "insights_query_10": {
+      "url": "/insights?_page=1&keywords=&_limit=10&topic=32",
+      "testName": "insights_query_10",
+      "auth": false
+    },
+    "insights_query_11": {
+      "url": "/insights?_page=1&keywords=&_limit=10&expertise=17",
+      "testName": "insights_query_11",
+      "auth": false
+    },
+    "insights_query_12": {
+      "url": "/insights?_page=1&keywords=&_limit=10&type=3",
+      "testName": "insights_query_12",
+      "auth": false
+    }
+  }
