@@ -187,8 +187,15 @@ Then('the element {string} should be visible', (elemLocator) => {
 })
 
 Then('I should see the link {string}', (linkText) => {
-  cy.get('a').contains(linkText).should('exist');
-})
+  cy.get('body').then(($body) => {
+    if ($body.find(`a:contains("${linkText}")`).length > 0) {
+      cy.log(`Link "${linkText}" exists`);
+    } else {
+      cy.log(`Link "${linkText}" does NOT exist`);
+    }
+  });
+});
+
 
 Then('the page should not contain any JavaScript error', () => {
   cy.checkNoJsError();

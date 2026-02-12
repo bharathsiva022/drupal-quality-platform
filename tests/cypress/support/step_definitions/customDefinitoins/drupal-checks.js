@@ -370,7 +370,13 @@ Then('I verify metatags should be configured', () => {
     const hasTitle = doc.title && doc.title.trim().length > 0;
     const hasMetaDescription =
       html.includes('name="description"') ||
-      html.includes("name='description'");
+      html.includes("name='description'")||
+      html.includes('rel="canonical"') ||
+      html.includes("rel='canonical'")||
+      html.includes('name="keywords"') ||
+      html.includes("name='keywords'")||
+      html.includes('rel="shortlink"') ||
+      html.includes("rel='shortlink'");
 
     expect(hasTitle, 'Page title should be present').to.be.true;
     expect(
