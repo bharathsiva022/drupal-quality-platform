@@ -1,6 +1,6 @@
 Feature: Core and Custom Functionality Validation
 
-  @regression_be
+  @regression_be @drupal_checks
   Scenario: Verify core pages and custom blocks render without errors
     Given I visit the "/user/login" page
     Then I should see "Username"
@@ -15,13 +15,13 @@ Feature: Core and Custom Functionality Validation
     Then I should see the block with selector "random_block_selector" 
     Then the page should not contain any PHP or DB error
 
-  @regression_be
+  @regression_be @drupal_checks
   Scenario: Verify anonymous user can access public nodes
     Given I visit the "basic-test-page-1" page
     Then I should see the content title "Basic Test Page"
     Then the page should not contain any PHP or DB error
 
-  @regression_be
+  @regression_be @drupal_checks
   Scenario: Verify authenticated user dashboard is accessible
     Given I login to admin dashboard with username 'username' and password 'password'
     And I visit the "/user" page
@@ -29,13 +29,13 @@ Feature: Core and Custom Functionality Validation
     And I should see the link "edit"
     Then the page should not contain any PHP or DB error
 
-  @regression_be
+  @regression_be @drupal_checks
   Scenario: Validate menu links route correctly
     Given I visit the homepage
     When I click the element "random_element_to_click"
     Then the page should not contain any PHP or DB error
 
-  @regression_be
+  @regression_be @drupal_checks
   Scenario: Validate 404 page behavior
     Given I visit the "/test-0" page
     Then I should see "Accidents Happen!"
