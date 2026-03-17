@@ -105,7 +105,7 @@ Cypress.Commands.add("fillForm", (dataTable) => {
 
     } 
     else if (elem.FieldType === "select") {
-      cy.get(selectors[elem.Field]).select(elem.Value);
+      cy.get(selectors[elem.Field]).select(elem.Value, { force: true });
     } else if (elem.FieldType === "checkbox") {
       elem.Value
         ? cy

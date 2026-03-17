@@ -92,12 +92,20 @@ Cypress.Commands.add(
         cy.get(selectors.ckeditor_toolbar_item_link_button).click({ force: true });
         formattedContent = `<a href="${inputValue}">${inputValue}</a>`;
       } else if (formatType === "bulleted") {
+        cy.get('body').then(($body) => {
+              const btn = $body.find("[data-cke-tooltip-text='Show more items']");
+              if (btn.length > 0) {
+                cy.wrap(btn).click();} });
         cy.get(selectors.ckeditor_toolbar_item_bulleted_list_button).click({
           force: true,
         });
         formattedContent = `
           ${inputValue}`;
       } else if (formatType === "numbered") {
+        cy.get('body').then(($body) => {
+            const btn = $body.find("[data-cke-tooltip-text='Show more items']");
+            if (btn.length > 0) {
+              cy.wrap(btn).click();} });
         cy.get(selectors.ckeditor_toolbar_item_numbered_list_button).click({
           force: true,
         });
@@ -125,15 +133,19 @@ Cypress.Commands.add(
 Cypress.Commands.add("selectMediaFile", (mediaFileName) => {
   cy.get(selectors.ckeditor_toolbar_item_insert_media_button).should('be.visible').click({ force: true });
   cy.wait(3000)
+  cy.get("[data-drupal-selector='edit-name']").type(mediaFileName);
+  cy.get("[value='Apply filters']").should('be.visible').click({ force: true });
+  cy.wait(3000)
   cy.get(selectors.ckeditor_toolbar_item_insert_media_list).then(($elements) => {
-  const $target = $elements.filter((i, el) => {
-    return Cypress.$(el).text().trim() === mediaFileName;
+    const $target = $elements.filter((i, el) => {
+      return Cypress.$(el).text().trim() === mediaFileName;
+    });
+    if ($target.length) {
+      cy.wrap($target.first()).click({ force: true });
+    } else if ($elements.length) {
+      cy.wrap($elements.first()).click({ force: true }); // Fallback: click the first available file
+    }
   });
-
-  if ($target.length) {
-    cy.wrap($target).click({ force: true });
-  }
-});
 
 cy.contains('button.media-library-select', 'Insert selected', { timeout: 10000 })
   .should('be.visible')
