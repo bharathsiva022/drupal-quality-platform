@@ -23,5 +23,6 @@
     "ckeditor_toolbar_heading_dropdown_list": "[class*='ck-heading-dropdown'] > div.ck-dropdown__panel > ul > li",
     "ckeditor_iframe": "iframe.cke_wysiwyg_frame",
     "ckeditor_body": "body.cke_editable",
-    "content_intro_section": "[data-drupal-selector='edit-body-0']"
+    "content_intro_section": "[data-drupal-selector='edit-body-0']",
+    "ckeditor_toolbar_more_button" : "button[data-cke-tooltip-text='Show more items']"    
 }
