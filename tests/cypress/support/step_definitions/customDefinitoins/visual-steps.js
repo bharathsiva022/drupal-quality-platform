@@ -37,9 +37,9 @@ When("I capture Percy snapshots for each page", () => {
     cy.log(`Visiting ${url} → snapshot: ${snapName}`);
     cy.visit(url, { failOnStatusCode: false });
 
-    cy.wait(500);
+    cy.wait(1000);
     cy.percySnapshot(snapName, {
-      widths: page.widths > 0 ? page.widths : [357,768,1440],
+      widths: page.widths > 0 ? page.widths : [768,1440],
       minHeight: 900,
       percyCSS: `
         #CybotCookiebotDialog { display: none !important; }

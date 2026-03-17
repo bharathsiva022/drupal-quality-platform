@@ -3,7 +3,7 @@ Feature: Manage Menu
     Background:
         Given I login to admin dashboard with username 'username' and password 'password'
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario Outline: I create a new menu <menu_title>
         And I create a menu with name "<menu_title>" and admin summary "<administrative_summary>"
         Then I should see the message "Menu <menu_title> has been added."
@@ -15,7 +15,7 @@ Feature: Manage Menu
             | Footer Links - Test       | Links for the footer section for testing      |
             | Sidebar Navigation - Test | Sidebar-specific navigation links for testing |
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario Outline: Menu link CRUD operations
         When I navigate to "/admin/structure/menu"
         Then the menu "<menu_title>" should be visible in the "menu_list"
@@ -38,7 +38,7 @@ Feature: Manage Menu
             | Sidebar Navigation - Test | About Us - Test       | /about1          | <Sidebar Navigation - Test> | About Us - Test updated       | /about-us1        |
             | Footer Links - Test       | Privacy Policy - Test | /privacy-policy1 | <Footer Links - Test>       | Privacy Policy - Test updated | /privacy-policy1   |
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario: Edit an existing menu
         When I navigate to "/admin/structure/menu"
         Then the menu "Main Navigation - Test" should be visible in the "menu_list"
@@ -49,7 +49,7 @@ Feature: Manage Menu
         When I navigate to "/admin/structure/menu"
         Then the menu "Main Navigation - Test updated" should be visible in the "menu_list"
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario Outline: Delete the menu item <menu_title>
         When I navigate to "/admin/structure/menu"
         Then the menu "<menu_title>" should be visible in the "menu_list"

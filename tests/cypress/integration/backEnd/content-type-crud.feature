@@ -2,7 +2,7 @@ Feature: INX Content Type CRUD operations
   Background: Admin login
     Given I login to admin dashboard with username 'username' and password 'password'
     
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: Component page builder create operation
     When I navigate to '/admin/content'
     And I create a "Component Page Builder" with the following details:
@@ -17,7 +17,7 @@ Feature: INX Content Type CRUD operations
     Then I should see the test page "Inx - Test component page builder" in the content table
     And I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: Component page builder edit operation
     When I navigate to '/admin/content'
     And I edit the "Component Page Builder" with the details:
@@ -30,14 +30,14 @@ Feature: INX Content Type CRUD operations
     Then I should see the test page "Inx - Test component page builder" in the content table
     And I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: Component page builder delete operation
     When I navigate to '/admin/content'
     When I delete the "Inx - Test component page builder updated"
     Then I should not see the "Inx - Test component page builder updated" anymore
     Then I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: Products create operation
     When I navigate to '/admin/content'
     And I create a "Products" with the following details:
@@ -59,7 +59,7 @@ Feature: INX Content Type CRUD operations
     Then I should see the test page "Inx - Test products" in the content table
     And I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: Products edit operation
     When I navigate to '/admin/content'
     And I edit the "Inx - Test products" with the details:
@@ -72,14 +72,14 @@ Feature: INX Content Type CRUD operations
     Then I should see the test page "Inx - Test products Updated" in the content table
     And I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: Products delete operation
     When I navigate to '/admin/content'
     When I delete the "Inx - Test products Updated"
     Then I should not see the "Inx - Test products Updated" anymore
     Then I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: Blog create operation
     When I navigate to '/admin/content'
     And I create a "Blog" with the following details:
@@ -107,7 +107,7 @@ Feature: INX Content Type CRUD operations
     Then I should see the test page "Inx - Test Blog" in the content table
     When I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: Blog edit operation
     When I navigate to '/admin/content'
     And I edit the "Inx - Test Blog" with the details:
@@ -120,14 +120,14 @@ Feature: INX Content Type CRUD operations
     Then I should see the test page "Inx - Test Blog Updated" in the content table
     And I logout of the application
 
-   @smoke @regression_be @sanity @CRUD
+   @smoke @regression @sanity @CRUD
   Scenario: Blog delete operation
     When I navigate to '/admin/content'
     When I delete the "Inx - Test Blog Updated"
     Then I should not see the "Inx - Test Blog Updated" anymore
     Then I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: INX News create operation
     When I navigate to '/admin/content'
     And I create a "INX News" with the following details:
@@ -144,7 +144,7 @@ Feature: INX Content Type CRUD operations
     Then I should see the test page "Inx - Test News" in the content table
     And I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: INX News edit operation
     When I navigate to '/admin/content'
     And I edit the "Inx - Test News" with the details:
@@ -157,7 +157,7 @@ Feature: INX Content Type CRUD operations
     Then I should see the test page "Inx - Test News Updated" in the content table
     And I logout of the application
 
-  @smoke @regression_be @sanity @CRUD
+  @smoke @regression @sanity @CRUD
   Scenario: INX News delete operation
     When I navigate to '/admin/content'
     When I delete the "Inx - Test News"

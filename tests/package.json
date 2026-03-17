@@ -20,8 +20,8 @@
     "run:dev:vs:uat": "cross-env PERCY_BRANCH=dev PERCY_TARGET_BRANCH=uat CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_existing'",
     "run:pr:branch:vs:uat/dev/live": "cross-env PERCY_TARGET_BRANCH=<uat/dev/live_site> CYPRESS_username=<username> CYPRESS_password=<password>  npx percy exec -- cypress run --env configFile=<Your local accessable file>,TAGS='@visual_existing'",
     "run:dev:vs:figma": "cross-env PERCY_BRANCH=dev_vs_figma PERCY_TARGET_BRANCH=figma_design CYPRESS_username=<username> CYPRESS_password=<password> npx percy exec -- cypress run --env configFile=dev,TAGS='@visual_redesign'",
-    "run:test:headless": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --browser chrome --env configFile=dev,TAGS='@drupal_checks'",
-    "run:test:headed": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --headed --browser chrome --env configFile=dev,TAGS='@drupal_checks'", 
+    "run:test:headless": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --browser chrome --env configFile=dev,TAGS='@regression'",
+    "run:test:headed": "cross-env CYPRESS_username=<username> CYPRESS_password=<password> cypress run --headed --browser chrome --env configFile=dev,TAGS='@regression'", 
     
     "pw:test:dev:visual": "cross-env TEST_ENV=dev npx playwright test --project=chromium --headed playwright/tests/visualTests/chartis_visual_tests.spec.js",
     "pw:test:visual": "cross-env TEST_ENV=dev npx percy exec -- npx playwright test --project=chromium --headed playwright/tests/visualTests/chartis_visual_tests.spec.js"

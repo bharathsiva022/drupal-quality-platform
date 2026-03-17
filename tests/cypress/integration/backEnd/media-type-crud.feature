@@ -4,7 +4,7 @@ Feature: Managing media and media type
         Given I login to admin dashboard with username 'username' and password 'password'
 
 
-@smoke @regression_be @sanity
+@smoke @regression @sanity
 Scenario: Validating the presense of Document, Image and Remote video media typesa are configured
     When I navigate to "/admin/structure/media"
     Then I validate the existance of the media types:
@@ -15,7 +15,7 @@ Scenario: Validating the presense of Document, Image and Remote video media type
         | Video        |
     And I logout of the application
 
-@smoke @regression_be @sanity
+@smoke @regression @sanity
 Scenario: Adding and updating Image media
     When I navigate to "/admin/content/media" 
     And I click on "Add media" button
@@ -25,7 +25,7 @@ Scenario: Adding and updating Image media
     When I delete the "testimage2" media
     And I logout of the application
 
-@smoke @regression_be @sanity
+@smoke @regression @sanity
 Scenario: Add a new Remote Video
     When I navigate to "/admin/content/media" 
     And I click on "Add media" button
@@ -34,7 +34,7 @@ Scenario: Add a new Remote Video
     When I delete the video media
     And I logout of the application
 
-@smoke @regression_be @sanity
+@smoke @regression @sanity
 Scenario: Adding and updating File media
     When I add an "Document" with the name "Test Document", file "mediaTestData\INX-test-1.pdf"
     Then I should see the "INX-test-1" in the media library
@@ -42,7 +42,7 @@ Scenario: Adding and updating File media
     When I delete the "INX-test-2" media
     And I logout of the application
 
-@smoke @regression_be @sanity
+@smoke @regression @sanity
 Scenario: Adding and updating Video media
     When I add an "Video" with the name "Test Video", file "mediaTestData\test_video1.mp4"
     Then I should see the "test_video1" in the media library
