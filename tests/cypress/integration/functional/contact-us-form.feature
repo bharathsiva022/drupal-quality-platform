@@ -2,7 +2,7 @@ Feature: INX contact us form
     Background: Admin login
         Given I login to admin dashboard with username 'username' and password 'password'
 
-    @regression_fe
+    @regression
     Scenario: Submit contact form with valid data
         When I navigate to '/contact'
         Then I fill in the contact form with the following details:

@@ -4,7 +4,7 @@ Feature: Basic page layout builder
         Given I login to admin dashboard with username 'username' and password 'password'
         When I navigate to '/admin/content'
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario: Adding landing page content
         When I create a "Component Page Builder" with the following details:
             | Field                    | Value                           | FieldType |
@@ -12,7 +12,7 @@ Feature: Basic page layout builder
             | content_title            | Component Page - layout builder | input     |
             | basic_action_submit      | Save                            | button    |
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario: Adding section to the Component Page Builder content using layout builder
         When I add the section "One column" from edit layout for "Component Page - layout builder"
             | Field                   | Value        | FieldType |
@@ -20,7 +20,7 @@ Feature: Basic page layout builder
             | add_section_style       | Grey         | checkbox  |
             | add_section_submit      | Add section  | button    |
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario: Adding "Hero Section" component block to the landing page content using layout builder
         When I edit the content 'Component Page - layout builder' and navigate to layout page
         Then I add the block "Hero Section" to the section index 0 with the details:
@@ -42,7 +42,7 @@ Feature: Basic page layout builder
         Then I should see the section with title "Testing Hero Banner"
         And I should see the block "component_hero_banner"
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario: Deleting the Component Page - layout builder content
         When I delete the "Component Page - layout builder"
         Then I should not see the "Component Page - layout builder" anymore

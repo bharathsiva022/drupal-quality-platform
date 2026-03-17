@@ -3,7 +3,7 @@ Feature: Managing Taxonomy Terms in UHG
     Background: Admin login
         Given I login to admin dashboard with username 'username' and password 'password'
 
-    @smoke @regression_be @sanity
+    @smoke @regression @sanity
     Scenario Outline: Manage Taxonomy Terms for <Taxonomy>
         When I navigate to '/admin/structure/taxonomy'
         And I create a term with the name "<TermName>" and description "<Description>" for the vocabulary "<Taxonomy>"

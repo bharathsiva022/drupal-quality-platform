@@ -3,7 +3,7 @@ Feature: INX product purchasing process
   Background: Admin login
     Given I login to admin dashboard with username 'username' and password 'password'
 
-  @regression_fe
+  @regression
   Scenario: User successfully purchases a product
     When I navigate to '/buy-swatch'
     And I enter the following product details:
