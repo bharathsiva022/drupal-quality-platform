@@ -51,10 +51,10 @@ Cypress.Commands.add("setCKEditorContent", (selector, content) => {
 
 Cypress.Commands.add("setCKEditorContentSections", (sectionSelector, content) => {
   cy.get(sectionSelector)
-    .find(".ck-editor__editable_inline") // Find CKEditor5 content area
+    .find(".ck-editor__editable_inline") 
     .should("exist")
     .then(($el) => {
-      const editorElement = $el[0]; // Get the raw DOM element
+      const editorElement = $el[0]; 
       cy.window().then((win) => {
         if (!win.document.querySelector(sectionSelector)) {
           throw new Error(`Editor element not found for selector: ${sectionSelector}`);
@@ -67,6 +67,27 @@ Cypress.Commands.add("setCKEditorContentSections", (sectionSelector, content) =>
       });
     });
 });
+
+function clickToolbarItem(buttonSelector) {
+  cy.get('body').then(($body) => {
+    if (
+      $body.find(buttonSelector).length &&
+      $body.find(buttonSelector).is(':visible')
+    ) {
+      cy.get(buttonSelector).click({ force: true });
+    } else {
+     
+      cy.get('button[data-cke-tooltip-text="Show more items"]')
+        .should('be.visible')
+        .click({ force: true });
+
+    
+      cy.get(buttonSelector)
+        .should('be.visible')
+        .click({ force: true });
+    }
+  });
+}
 
 Cypress.Commands.add(
   "formatTextInCkEditor",
@@ -91,26 +112,12 @@ Cypress.Commands.add(
       } else if (formatType === "link") {
         cy.get(selectors.ckeditor_toolbar_item_link_button).click({ force: true });
         formattedContent = `<a href="${inputValue}">${inputValue}</a>`;
-      } else if (formatType === "bulleted") {
-        cy.get('body').then(($body) => {
-              const btn = $body.find("[data-cke-tooltip-text='Show more items']");
-              if (btn.length > 0) {
-                cy.wrap(btn).click();} });
-        cy.get(selectors.ckeditor_toolbar_item_bulleted_list_button).click({
-          force: true,
-        });
-        formattedContent = `
-          ${inputValue}`;
+      }else if (formatType === "bulleted") {
+       clickToolbarItem(selectors.ckeditor_toolbar_item_bulleted_list_button);
+       formattedContent = `${inputValue}`;
       } else if (formatType === "numbered") {
-        cy.get('body').then(($body) => {
-            const btn = $body.find("[data-cke-tooltip-text='Show more items']");
-            if (btn.length > 0) {
-              cy.wrap(btn).click();} });
-        cy.get(selectors.ckeditor_toolbar_item_numbered_list_button).click({
-          force: true,
-        });
-        formattedContent = `
-          ${inputValue}`;
+       clickToolbarItem(selectors.ckeditor_toolbar_item_numbered_list_button);
+       formattedContent = `${inputValue}`;
       } else if (formatType === "blockquote") {
         cy.get(selectors.ckeditor_toolbar_item_block_quote_button).click({
           force: true,
