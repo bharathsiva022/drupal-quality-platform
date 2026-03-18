@@ -3,7 +3,7 @@ Feature: Drupal Upgrade Validation
   @regression @drupal_checks
   Scenario: Validate key pages after upgrade
     Given I visit the "/product-finder" page
-    Then I should see the content title "Product Finder | INX International"
+    Then I should see the content title "Find Your Perfect Ink Solution"
     And the page should not contain any PHP or DB error
 
   @regression @drupal_checks
