@@ -2,77 +2,79 @@ import * as selectors from "../../step_definitions/mappings-importer";
 import "cypress-real-events/support";
 
 Cypress.Commands.add("loginToDrupal", (username, password) => {
-  cy.navigateToUrl("/user/login");
-
-  cy.get(selectors.login_username_field)
-    .type(Cypress.env(username), { force: true });
-
-  cy.get(selectors.login_password_field)
-    .type(Cypress.env(password), { force: true });
-
+  cy.visit("/user/login");
+  cy.get(selectors.login_username_field).type(Cypress.env(username), {
+    force: true,
+  });
+  cy.get(selectors.login_password_field).type(Cypress.env(password), {
+    force: true,
+  });
   cy.fillCaptcha();
-
-  cy.get(selectors.login_submit_button)
-    .should("be.visible")
-    .click();
+  cy.get(selectors.login_submit_button).should("be.visible").click();
 });
 
 Cypress.Commands.add("loginForVisual", (username, password) => {
-  cy.navigateToUrl("/user/login");
-
-  cy.get(selectors.login_username_field)
-    .type(username, { force: true });
-
-  cy.get(selectors.login_password_field)
-    .type(password, { force: true });
-
+  cy.visit("/user/login");
+  cy.get(selectors.login_username_field).type(username, {
+    force: true,
+  });
+  cy.get(selectors.login_password_field).type(password, {
+    force: true,
+  });
   cy.fillCaptcha();
-
-  cy.get(selectors.login_submit_button)
-    .should("be.visible")
-    .click();
+  cy.get(selectors.login_submit_button).should("be.visible").click();
 });
 
-Cypress.Commands.add("logoutForVisual", () => {
-  cy.navigateToUrl("/user/logout");
-  cy.get(selectors.logout_button).click({ force: true });
-});
+Cypress.Commands.add('logoutForVisual',()=>{
+cy.visit("/user/logout");
+cy.get(selectors.logout_button).click({force:true})
+})
 
-// fill captcha
 Cypress.Commands.add("fillCaptcha", () => {
-  cy.get(selectors.login_captcha_question).invoke('text').then((txt) => {
-      const match = txt.match(/(\d+)\s*([\+\-\*\/])\s*(\d+)/);
+  cy.get("body").then(($body) => {
+    // Check if captcha question exists
+    if ($body.find(selectors.login_captcha_question).length > 0) {
 
-      if (match) {
-        const num1 = parseInt(match[1], 10);
-        const operator = match[2];
-        const num2 = parseInt(match[3], 10);
+      cy.get(selectors.login_captcha_question)
+        .invoke("text")
+        .then((txt) => {
+          const match = txt.match(/(\d+)\s*([\+\-\*\/])\s*(\d+)/);
 
-        let result;
+          if (match) {
+            const num1 = parseInt(match[1], 10);
+            const operator = match[2];
+            const num2 = parseInt(match[3], 10);
 
-        switch (operator) {
-          case '+':
-            result = num1 + num2;
-            break;
-          case '-':
-            result = num1 - num2;
-            break;
-          case '*':
-            result = num1 * num2;
-            break;
-          case '/':
-            result = Math.floor(num1 / num2);
-            break;
-          default:
-            throw new Error('Unknown operator');
-        }
+            let result;
 
-        cy.get(selectors.login_captcha_field).type(result.toString());  
-        
-      } else {
-        throw new Error('Captcha text pattern not found');
-      }
-    });
+            switch (operator) {
+              case "+":
+                result = num1 + num2;
+                break;
+              case "-":
+                result = num1 - num2;
+                break;
+              case "*":
+                result = num1 * num2;
+                break;
+              case "/":
+                result = Math.floor(num1 / num2);
+                break;
+              default:
+                throw new Error("Unknown operator");
+            }
+
+            cy.get(selectors.login_captcha_field)
+              .type(result.toString());
+          } else {
+            throw new Error("Captcha text pattern not found");
+          }
+        });
+
+    } else {
+      cy.log("No captcha found, skipping...");
+    }
+  });
 });
 
 
@@ -116,17 +118,15 @@ Cypress.Commands.add(
 
 Cypress.Commands.add("loginAs", (username, password, role) => {
   if (role === "Anonymous user") {
-    cy.navigateToUrl("/", { failOnStatusCode: false });
+    cy.visit("/", { failOnStatusCode: false }); // Anonymous users don't need login
     return;
+  } else {
+    cy.visit("/user/login"); // Navigate to login page
+    cy.get(selectors.login_username_field).type(username); // Enter username
+    cy.get(selectors.login_password_field).type(password); // Enter password
+    cy.get(selectors.login_submit_button).click(); // Submit the form
+    cy.wait(2000);
   }
-
-  cy.navigateToUrl("/user/login");
-
-  cy.get(selectors.login_username_field).type(username);
-  cy.get(selectors.login_password_field).type(password);
-  cy.get(selectors.login_submit_button).click();
-
-  cy.wait(2000);
 });
 
 Cypress.Commands.add("logout", () => {

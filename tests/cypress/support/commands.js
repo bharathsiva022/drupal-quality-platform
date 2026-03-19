@@ -27,6 +27,27 @@
 
 import 'cypress-file-upload';
 
+Cypress.Commands.overwrite("visit", (originalFn, url, options = {}) => {
+  const shieldUsername = Cypress.env('SHIELD_USERNAME');
+  const shieldPassword = Cypress.env('SHIELD_PASSWORD');
 
+  let finalUrl = url;
+
+  if (shieldUsername && shieldPassword && typeof url === "string") {
+    try {
+      const parsed = new URL(url, Cypress.config("baseUrl"));
+      parsed.username = shieldUsername;
+      parsed.password = shieldPassword;
+      finalUrl = parsed.toString();
+    } catch (e) {
+      // fallback silently
+    }
+  }
+
+  return originalFn(finalUrl, {
+    failOnStatusCode: false,
+    ...options
+  });
+});
 
 
