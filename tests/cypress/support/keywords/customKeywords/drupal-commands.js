@@ -2,33 +2,41 @@ import * as selectors from "../../step_definitions/mappings-importer";
 import "cypress-real-events/support";
 
 Cypress.Commands.add("loginToDrupal", (username, password) => {
-  cy.visit("/user/login");
-  cy.get(selectors.login_username_field).type(Cypress.env(username), {
-    force: true,
-  });
-  cy.get(selectors.login_password_field).type(Cypress.env(password), {
-    force: true,
-  });
+  cy.navigateToUrl("/user/login");
+
+  cy.get(selectors.login_username_field)
+    .type(Cypress.env(username), { force: true });
+
+  cy.get(selectors.login_password_field)
+    .type(Cypress.env(password), { force: true });
+
   cy.fillCaptcha();
-  cy.get(selectors.login_submit_button).should("be.visible").click();
+
+  cy.get(selectors.login_submit_button)
+    .should("be.visible")
+    .click();
 });
 
 Cypress.Commands.add("loginForVisual", (username, password) => {
-  cy.visit("/user/login");
-  cy.get(selectors.login_username_field).type(username, {
-    force: true,
-  });
-  cy.get(selectors.login_password_field).type(password, {
-    force: true,
-  });
+  cy.navigateToUrl("/user/login");
+
+  cy.get(selectors.login_username_field)
+    .type(username, { force: true });
+
+  cy.get(selectors.login_password_field)
+    .type(password, { force: true });
+
   cy.fillCaptcha();
-  cy.get(selectors.login_submit_button).should("be.visible").click();
+
+  cy.get(selectors.login_submit_button)
+    .should("be.visible")
+    .click();
 });
 
-Cypress.Commands.add('logoutForVisual',()=>{
-cy.visit("/user/logout");
-cy.get(selectors.logout_button).click({force:true})
-})
+Cypress.Commands.add("logoutForVisual", () => {
+  cy.navigateToUrl("/user/logout");
+  cy.get(selectors.logout_button).click({ force: true });
+});
 
 // fill captcha
 Cypress.Commands.add("fillCaptcha", () => {
@@ -108,15 +116,17 @@ Cypress.Commands.add(
 
 Cypress.Commands.add("loginAs", (username, password, role) => {
   if (role === "Anonymous user") {
-    cy.visit("/", { failOnStatusCode: false }); // Anonymous users don't need login
+    cy.navigateToUrl("/", { failOnStatusCode: false });
     return;
-  } else {
-    cy.visit("/user/login"); // Navigate to login page
-    cy.get(selectors.login_username_field).type(username); // Enter username
-    cy.get(selectors.login_password_field).type(password); // Enter password
-    cy.get(selectors.login_submit_button).click(); // Submit the form
-    cy.wait(2000);
   }
+
+  cy.navigateToUrl("/user/login");
+
+  cy.get(selectors.login_username_field).type(username);
+  cy.get(selectors.login_password_field).type(password);
+  cy.get(selectors.login_submit_button).click();
+
+  cy.wait(2000);
 });
 
 Cypress.Commands.add("logout", () => {
