@@ -13,6 +13,10 @@
   },
 
   "env": {
-    "TAGS": "not @ignore-env-test"
+    "TAGS": "not @ignore-env-test",
+    "SHIELD_USERNAME": "none",
+    "SHIELD_PASSWORD": "none"
   }
 }
+
+

@@ -1,18 +1,37 @@
 import getCookie from "../../methods/getCookie";
 
-Cypress.Commands.add("navigateToUrl", (input) => {
+Cypress.Commands.add("navigateToUrl", (input, overrides = {}) => {
+  const shieldUsername = Cypress.env('SHIELD_USERNAME');
+  const shieldPassword = Cypress.env('SHIELD_PASSWORD');
+
+  const hasShield = shieldUsername && shieldPassword;
+
+  let url;
+
   if (input.startsWith('http') || input.startsWith('/')) {
-    // Direct URL or relative path
-    cy.visit(input);
-    cy.document().should((doc) => {
-  expect(doc.readyState).to.equal('complete');
-});
+    url = input;
   } else {
-    // Treat as Cypress.env alias
-    const savedUrl = Cypress.env(input);
-    if (!savedUrl) {
+    url = Cypress.env(input);
+
+    if (!url) {
       throw new Error(`No URL found in Cypress.env() for alias: ${input}`);
     }
-    cy.visit(savedUrl);
   }
+
+  const visitOptions = {
+    failOnStatusCode: false,
+    ...(hasShield && {
+      auth: {
+        username: shieldUsername,
+        password: shieldPassword
+      }
+    }),
+    ...overrides
+  };
+
+  cy.visit(url, visitOptions);
+
+  cy.document().should((doc) => {
+    expect(doc.readyState).to.equal('complete');
+  });
 });
