@@ -236,8 +236,12 @@ Then('I should be directed to the page', () => {
 });
 
 When("I navigate to the DB logs page", () => {
-  cy.request({
+   cy.request({
     url: '/admin/reports/dblog',
+      auth: {
+      username: '',       
+      password: ''
+    },
     failOnStatusCode: false
   }).as('dblogResponse');
 });
@@ -335,8 +339,12 @@ Then('g tag should be configured correctly for the environment', () => {
 });
 
 When('I request {string}', (path) => {
-  cy.request({
+ cy.request({
     url: path,
+      auth: {
+      username: '',       
+      password: ''
+    },
     failOnStatusCode: false,
   }).as('systemFileResponse');
 });
