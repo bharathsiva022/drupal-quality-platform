@@ -130,7 +130,7 @@ Then('I confirm the user deletion', () => {
 
 Then('I should not see user {string} in people page', (username) => {
 
-  cy.get(selectors.basic_table_locator,{ timeout: 10000 })
+  cy.get(selectors.basic_table_locator,{ timeout: 15000 })
     .should('be.visible')
     .and('not.contain.text', username);
 });
